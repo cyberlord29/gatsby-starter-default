@@ -8,8 +8,12 @@
 import * as React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 
-import Header from "./header"
+
 import "./layout.css"
+import GlobalStyle from '../globalStyles';
+import Navbar from "./Navbar/Navbar"
+import "@fontsource/league-spartan/400.css";
+import "@fontsource/league-spartan/600.css";
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -24,14 +28,13 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
+          <GlobalStyle />
       <div
         style={{
           margin: `0 auto`,
-          maxWidth: `var(--size-content)`,
-          padding: `var(--size-gutter)`,
         }}
-      >
+      >      <Navbar/>
+
         <main>{children}</main>
         <footer
           style={{
@@ -39,9 +42,9 @@ const Layout = ({ children }) => {
             fontSize: `var(--font-sm)`,
           }}
         >
-          © {new Date().getFullYear()} &middot; Built with
+          © {new Date().getFullYear()} &middot;
           {` `}
-          <a href="https://www.gatsbyjs.com">Gatsby</a>
+          <a href="#">Advanta Technologies</a>
         </footer>
       </div>
     </>
