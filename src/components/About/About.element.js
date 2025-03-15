@@ -41,7 +41,7 @@ export const Header = styled.div`
 `;
 
 export const Button = styled.button`
-  background: #FFAB00 0% 0% no-repeat padding-box;
+  background: #5DA9FF 0% 0% no-repeat padding-box;
   box-shadow: 0px 3px 6px #00000029;
   border-radius: 4px;
   border: none;

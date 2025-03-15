@@ -2,13 +2,16 @@ import React from 'react'
 import { Banner, CoursesContainer, Header, Button, CourseItem } from './Courses.elements'
 import { FlexContainer, Underline } from '../../globalStyles'
 import { navigate } from 'gatsby'
-
+import gatsby from '../../images/gatsby-icon.png'
 const Product = ({title, content, children}) => {
     return (
         <CourseItem>
-            <div style={{padding: "20px 0px", fontWeight: "600", fontSize: "20px"}}>
+            <div style={{padding: "20px 0px", fontWeight: "600", fontSize: "30px", display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "left"}}>
+                <img src={gatsby} style={{width: "30%", padding: "5px"}}/>
                 {title}
+                {/* <Underline style={{background:"white"}}/> */}
             </div>
+
             <div style={{display: "flex", justifyContent: "flex-start", padding: "0px 0px"}}>
                 {children}
             </div>
@@ -20,7 +23,7 @@ const Courses = (props) => {
     return (
         <CoursesContainer>
             <div style={{padding: "10px 7% 70px"}}>
-                <Header style={{display: "flex"}}>
+                <Header style={{display: "flex", fontSize: "34px",}}>
                     <div>
                         <div>
                             What we offer
@@ -34,12 +37,15 @@ const Courses = (props) => {
                         <p>
                             Using customer data or Business data to build AI solutions
                         </p>
-                    <ul>
+                        <div style={{ fontWeight: "100"}}>
+                    <ul className='arrows' style={{margin: "20px 10px"}}>
                         <li>Chatbots</li>
+                            
                         <li>Knowledge Base</li>
                         <li>Recommendations and Personalization</li>
                         <li>Content Generation (Text and possibly Multimedia)</li>
                     </ul>
+                        </div>
                     </div>
 
                     </Product>
@@ -48,7 +54,8 @@ const Courses = (props) => {
                             <p>
                                 Leveraging AI to optimize sales processes and increase revenue.
                             </p>
-                            <ul>
+                            <ul className='arrows'  style={{margin: "20px 10px"}}>
+
                                 <li>Lead Scoring and Prioritization</li>
                                 <li>Automated Outreach and Follow-ups</li>
                                 <li>Sales Forecasting and Trend Analysis</li>
@@ -63,7 +70,8 @@ const Courses = (props) => {
                             <p>
                                 Using AI to enhance marketing strategies and improve engagement.
                             </p>
-                            <ul>
+                            <ul className='arrows'  style={{margin: "20px 10px"}}>
+
                                 <li>Customer Segmentation and Targeting</li>
                                 <li>AI-driven Content Generation and Copywriting</li>
                                 <li>Ad Performance Optimization</li>

@@ -12,7 +12,9 @@ import {
     IconLabelContainer, 
     IconLabel
 } from './Navbar.elements'
-import logo from '../../images/logo-h.png'
+import logo from '../../images/gatsby-icon.png'
+import two from '../../images/2.png'
+
 import { Button } from '../Courses/Courses.elements'
 import { ModalContainer, Modal } from '../../globalStyles'
 import Booking from '../Booking/Booking'
@@ -33,12 +35,23 @@ const Navbar = () => {
              {!menu && <NavIconContainer to = '/'>
                 <IconLabelContainer>
                     <IconLabel>
+                        <div display="flex" style={{display: "flex", alignItems: "center"}}>
                         <img
                             className="icon"
                             src={logo}
-                            height={50}
+                            height={80}
                         >
                         </img>
+                        <img
+                            style={{paddingLeft: "10px"}}
+                            className="icon"
+                            src={two}
+                            height={150}
+                        >
+                        </img>
+
+                        </div>
+
                     </IconLabel>
                 </IconLabelContainer>
             </NavIconContainer> 
@@ -81,7 +94,7 @@ const Navbar = () => {
                  <NavItem>
                     <NavLink to="/">
                             <Button style={{padding: "10px 10px", marginTop: "0px"}} onClick={() =>{toggleModal(true)}}>
-                            Free Consultation
+                            Get in touch
                         </Button>
                     </NavLink>
                  </NavItem>

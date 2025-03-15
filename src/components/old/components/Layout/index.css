@@ -44,9 +44,9 @@
 }
 
 body{
-   --chat-widget-primary-color: #FFAB00;
-   --chat-widget-active-color:#FFAB00;
-   --chat-widget-bubble-color: #FFAB00;
+   --chat-widget-primary-color: #AFC8FF;
+      --chat-widget-active-color: #AFC8FF;
+      --chat-widget-bubble-color: #AFC8FF;
 }
 
 

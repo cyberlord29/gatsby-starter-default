@@ -2,13 +2,17 @@ import styled from 'styled-components'
 
 export const IntroCardContainer = styled.div`
     background-color: #F7F9FF;
+
     color: #132B4C;
     display: flex;
     flex-basis: 80%;
     justify-content: center;
+    text-align: center;
+    padding: 100px 80px;
     @media (max-width: 500px) {
         width: 100%;
         flex-direction: column;
+        padding: 40px;
 
     }
 `;
@@ -22,9 +26,6 @@ export const IntroLeftContainerHeader = styled.div`
     display: flex;
     padding: 3rem 7rem;
     flex-basis: 50%;
-    background: linear-gradient(to right, #445884, #53648B);
-    justify-content: center;
-    align-items: center;
     @media (max-width: 500px) {
         padding: 4rem 3rem;
     }
@@ -55,7 +56,7 @@ export const FeatureItemLarge = styled.div`
   border-radius: 4px;
   border: none;
   text-align: center;
-  background: linear-gradient(to right, #445884, #627092);
+  background-color: white;
   width: 400px;
   height: 290px;
   padding: 50px;
@@ -107,17 +108,21 @@ export const ButtonSecondary = styled.button`
 
 export const IntroTitle = styled.h1`
     display: block;
-    font-size: 3rem;
-    color: white;
+    font-size: 2.3rem;
+    color: #172647;
     line-height: 1.3;
+    align-items: center;
+
 `;
 
 export const DescriptionContainer = styled.p`
     display: block;
     font-size: 20px;
     font-weight: normal;
-    color: white;
+    color: #132B4C;
     line-height: 1.6;
+    text-align: left;
+    padding: 10px 25px;
 `;
 
 export const ButtonsContainer = styled.div`

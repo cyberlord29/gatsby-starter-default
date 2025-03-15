@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import {  Button, InputField, IntroCardContainer, IntroTitle, DescriptionContainer, IntroLeftContainer, ButtonsContainer, WhiteButtonsContainer, YellowButtonContainer, FeatureItem, IntroLeftContainerHeader } from './IntroCard.element'
-import landing from '../../images/landing.png'
+import one from '../../images/1.png'
+import two from '../../images/2.png'
 import axios from 'axios';
 
 axios.defaults.baseURL = 'https://hooks.zapier.com';
@@ -35,20 +36,28 @@ const IntroCard = (props) => {
                 </DescriptionContainer>
                 <div style={{display: "flex"}}>
                     <InputField onChange={(e)=>{setEmail(e.target.value)}} placeholder="Type your email"></InputField>
-                    <Button style={{borderTopLeftRadius:"0px", borderBottomLeftRadius: "0px"}} onClick={submitLead}>CONTACT</Button>
+                    <Button style={{borderTopLeftRadius:"0px", borderBottomLeftRadius: "0px"}} onClick={submitLead}>Get in touch</Button>
                 </div>
                 <DescriptionContainer  style={{fontSize: "12px", marginTop: "5px", color: "#8790A5"}}>
                     {'Join our mailing list or arrange a callback.'}
                 </DescriptionContainer>
                 </div>
             </IntroLeftContainerHeader>
-            <IntroLeftContainer className="" style={{flexBasis: "50%"}}>
-                <div style={{width: "100%"}}>
-                    <img
-                        src={landing}
-                        style={{width: "100%", objectFit: "contain", objectPosition: "top right"}}
-                        >
-                    </img>
+            <IntroLeftContainer className="" style={{flexBasis: "50%", background: "linear-gradient(to right, #53648B, #627092)"}}>
+                <div style={{width: "100%", padding: "20px"}}>
+                    <div style={{display: "flex", width: "100%", justifyContent: "space-evenly"}}>
+                        <img
+                            src={one}
+                            style={{width: "30%", objectFit: "contain", }}
+                            >
+                        </img>
+                        <img
+                            src={two}
+                            style={{width: "70%", objectFit: "contain", }}
+                            >
+                        </img>
+                    </div>
+
                     {/* <div style={{display: "flex", width: "100%", justifyContent: "center"}}>
                     <FeatureItem>
                         Experienced Mentors

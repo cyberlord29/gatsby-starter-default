@@ -2,9 +2,9 @@ import styled, {css} from 'styled-components'
 import { Link } from 'gatsby';
 
 export const Nav = styled.nav`
-    height: 80px;
+    height: 90px;
     display: flex;
-    background-color: #F7F9FF;
+    background: linear-gradient(to right, #445884, #627092);
 `;
 
 export const NavbarContainer = styled.div`
@@ -66,7 +66,7 @@ export const NavItem = styled.li`
 
 export const NavLink = styled(Link)`
     display: flex;
-    color: #132b4c;
+    color: white;
     align-items: center;
     text-decoration: none;
     padding: 0.5rem 0rem 0.5rem 2rem;
@@ -75,7 +75,7 @@ export const NavLink = styled(Link)`
     &:active {
         color: black;
     }
-    font-size: ${props => typeof window !== "undefined" && props.to ===  window.location.pathname ? '1.25rem' :'1rem'};
+    font-size: ${props => typeof window !== "undefined" && props.to ===  window.location.pathname ? '1.4rem' :'1rem'};
     &:hover {
         color: black
     }

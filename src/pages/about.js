@@ -26,7 +26,7 @@ const AboutPage = () => {
               We at Advanta, are as proud of our culture and values as we are of our services. In addition the organisation supports grassroots and International charities wherever possible.
               </DescriptionContainer> */}
             <AboutContainerAboutPage style={{position: "static", margin: "0px 0px"}}>
-                <Header style={{padding: "0px",margin: "100px 0px", marginBottom: "50px", fontSize: "34px"}}>
+                <Header style={{padding: "0px",margin: "0px 0px", marginBottom: "50px", fontSize: "60px"}}>
                       <div>
                           <div>
                               Our Team
@@ -34,7 +34,7 @@ const AboutPage = () => {
                           <Underline/>
                       </div>
                 </Header>
-                <FlexContainer style={{alignItems: "center", padding: "0px 20px"}}>
+                <FlexContainer style={{alignItems: "center", padding: "0px 20px", marginTop: "20px"}}>
                     <div>
                         <img
                             src={nehal}
@@ -46,7 +46,7 @@ const AboutPage = () => {
                       <div style={{fontSize: "24px", color:"#172647"}}>
                         Nehal Mahmood
                       </div>
-                      <div style={{fontSize: "14px", color:"#FFAB00"}}>
+                      <div style={{fontSize: "14px", color:"#AFC8FF"}}>
                         CEO | B.Tech & MBA Schulich
                         <br/>
                         <br/>
@@ -61,7 +61,7 @@ const AboutPage = () => {
                     <div style={{fontSize: "24px", color:"#172647"}}>
                         Maneesh Dharma
                     </div>
-                    <div style={{fontSize: "14px", color:"#FFAB00"}}>
+                    <div style={{fontSize: "14px", color:"#AFC8FF"}}>
                       CTO | B.Tech, Computer Science & Engineering
                     </div>
                       <div style={{fontSize: "14px", color:"#4B586A", marginTop: "20px", maxWidth: "800px"}}>

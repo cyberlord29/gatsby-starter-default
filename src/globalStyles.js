@@ -6,7 +6,7 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
     font-family: "League Spartan";
-    font-weight: 800;
+    font-weight: normal ;
     letter-spacing: 0.7px;
 }
 .no-mobile{
@@ -20,6 +20,25 @@ const GlobalStyle = createGlobalStyle`
 body{
     line-height: 1.5;
 }
+
+ul.arrows {
+    list-style: none; /* Remove default dots */
+    padding-left: 0px; /* Adjust indentation */
+}
+
+ul.arrows li {
+    position: relative;
+    padding-left: 20px; /* Space for arrow */
+    color: white; /* Text color */
+}
+
+ul.arrows li::before {
+    content: "→"; /* Unicode right arrow */
+    position: absolute;
+    left: -5px;
+    color: white; /* Arrow color */
+}
+
 `;
 
 
@@ -140,12 +159,12 @@ export const Modal = styled.div`
     background-color: white;
     border-radius: 6px;
     z-index: 100;
-    border: 2px solid #FFAB00;
+    border: 2px solid #AFC8FF;
     opacity: 100%;
 `;
 
 export const Underline = styled.div`
-    height: 5px;
+    height: 4px;
     background: #172647;
     border-radius: 4px;
     width: 80%;
