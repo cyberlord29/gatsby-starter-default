@@ -95,7 +95,7 @@ export const CourseItem = styled.div`
   flex-direction: column;
   cursor: pointer;
   color: white;
-  box-shadow: 2px 2px 20px 0px  #445884;
+  box-shadow: 0px 12px 33px 0px #445884;
   background: linear-gradient(to right, #445884, #627092);
   border-radius: 16px;
   border: none;

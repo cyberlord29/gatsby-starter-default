@@ -159,7 +159,7 @@ export const Modal = styled.div`
     background-color: white;
     border-radius: 6px;
     z-index: 100;
-    border: 2px solid #AFC8FF;
+    border: 2px solid #5DA9FF;
     opacity: 100%;
 `;
 

@@ -23,10 +23,12 @@ export const Banner = styled.div`
 `;
 
 const images = [
-  "https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Walt_Disney_wordmark.svg/2560px-Walt_Disney_wordmark.svg.png",
-  "https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Walt_Disney_wordmark.svg/2560px-Walt_Disney_wordmark.svg.png",
-  "https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Walt_Disney_wordmark.svg/2560px-Walt_Disney_wordmark.svg.png",
-  "https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Walt_Disney_wordmark.svg/2560px-Walt_Disney_wordmark.svg.png",
+  ["https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Walt_Disney_wordmark.svg/2560px-Walt_Disney_wordmark.svg.png",50],
+  ["https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Riot_Games_wordmark.svg/2560px-Riot_Games_wordmark.svg.png", 50],
+  ["https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/OpenAI_Logo.svg/2560px-OpenAI_Logo.svg.png",50],
+  ["https://logos-world.net/wp-content/uploads/2024/02/Twilio-Logo.png",80],
+  ["https://www.wem.ca/media/2772/harryrosen-web-logo.png",70],
+  ["https://brandlogos.net/wp-content/uploads/2023/08/sanofi-logo_brandlogos.net_c29es.png", 90]
 ];
 
 const IndexPage = () => (
@@ -43,9 +45,9 @@ const IndexPage = () => (
         {[...images, ...images].map((src, index) => (
           <img
             key={index}
-            src={src}
+            src={src[0]}
             alt="logo"
-            height={50}
+            height={src[1]}
             className="object-contain"
             style={{ marginRight: "40px" }}
           />

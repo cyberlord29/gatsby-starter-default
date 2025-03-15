@@ -25,7 +25,7 @@ const Footer = () => {
                 <IconLabelContainer>
                 </IconLabelContainer>
             </NavIconContainer> 
-            <Banner style={{height: "10px", padding: "0px", backgroundColor: "#AFC8FF"}}></Banner>
+            <Banner style={{height: "10px", padding: "0px", backgroundColor: "#FFAB00"}}></Banner>
             <Banner style={{fontSize: "14px"}}>
                 <div style={{display: "flex", flexDirection:"column", cursor: "pointer"}}>
                     <div style={{fontSize: "16px", textAlign: "start"}}>
