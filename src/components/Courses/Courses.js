@@ -6,14 +6,21 @@ import gatsby from '../../images/gatsby-icon.png'
 const Product = ({title, content, children}) => {
     return (
         <CourseItem>
-            <div style={{padding: "20px 0px", fontWeight: "600", fontSize: "30px", display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "left"}}>
-                <img src={gatsby} style={{width: "30%", padding: "5px"}}/>
-                {title}
-                {/* <Underline style={{background:"white"}}/> */}
-            </div>
+            <div style={{height: "100%", display: "flex", flexDirection: "column", justifyContent: "space-between"}}>
+                <div style={{padding: "20px 0px", fontWeight: "600", fontSize: "24px", display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "left"}}>
+                    <img src={gatsby} style={{width: "30%", padding: "5px"}}/>
+                    {title}
+                    {/* <Underline style={{background:"white"}}/> */}
+                </div>
 
-            <div style={{display: "flex", justifyContent: "flex-start", padding: "0px 0px"}}>
-                {children}
+                <div style={{display: "flex", justifyContent: "flex-start", padding: "0px 0px"}}>
+                    {children}
+                </div>
+                <div style={{width: "100%", display: "flex", justifyContent: "flex-end"}}>
+                    <Button>
+                        Learn more
+                    </Button>
+                </div>
             </div>
         </CourseItem>
     )
@@ -32,51 +39,84 @@ const Courses = (props) => {
                     </div>
                 </Header>
                 <FlexContainer>
-                    <Product title="Applications">
-                        <div>
-                        <p>
-                            Using customer data or Business data to build AI solutions
-                        </p>
-                        <div style={{ fontWeight: "100"}}>
-                    <ul className='arrows' style={{margin: "20px 10px"}}>
-                        <li>Chatbots</li>
-                            
-                        <li>Knowledge Base</li>
-                        <li>Recommendations and Personalization</li>
-                        <li>Content Generation (Text and possibly Multimedia)</li>
-                    </ul>
-                        </div>
-                    </div>
-
-                    </Product>
-                    <Product title="Sales">
+                    <Product title="Web Services">
                         <div>
                             <p>
-                                Leveraging AI to optimize sales processes and increase revenue.
+                                Comprehensive web development and integration solutions.
                             </p>
-                            <ul className='arrows'  style={{margin: "20px 10px"}}>
-
-                                <li>Lead Scoring and Prioritization</li>
-                                <li>Automated Outreach and Follow-ups</li>
-                                <li>Sales Forecasting and Trend Analysis</li>
-                                <li>AI-powered CRM Insights</li>
-                                <li>Dynamic Pricing and Offer Optimization</li>
+                            <ul className='arrows' style={{margin: "20px 10px"}}>
+                                <li>Business Websites</li>
+                                <li>Landing Websites</li>
+                                <li>Payment System Integrations, CRM integrations</li>
+                                <li>Customer Care setup</li>
+                                <li>Integrations and workflow setup</li>
+                                <li>SEO and discovery</li>
                             </ul>
                         </div>
                     </Product>
-
-                    <Product title="Marketing">
+                    <Product title="AI Applications">
                         <div>
                             <p>
-                                Using AI to enhance marketing strategies and improve engagement.
+                                Advanced AI solutions for modern business needs.
                             </p>
-                            <ul className='arrows'  style={{margin: "20px 10px"}}>
-
-                                <li>Customer Segmentation and Targeting</li>
-                                <li>AI-driven Content Generation and Copywriting</li>
-                                <li>Ad Performance Optimization</li>
-                                <li>Personalized Email and Campaign Automation</li>
-                                <li>Sentiment Analysis for Brand Monitoring</li>
+                            <ul className='arrows' style={{margin: "20px 10px"}}>
+                                <li>Chatbots (LLM's, GenAI, Agentic AI)</li>
+                                <li>Knowledge base</li>
+                                <li>Recommendations and Personalization</li>
+                                <li>Content Generation (Text and possibly Multimedia)</li>
+                            </ul>
+                        </div>
+                    </Product>
+                    <Product title="Strategy, Sales and Marketing">
+                        <div>
+                            <p>
+                                Comprehensive business growth solutions.
+                            </p>
+                            <ul className='arrows' style={{margin: "20px 10px"}}>
+                                <li>GTM Strategy</li>
+                                <li>Sales Automation (Lead generation, Email automation, LinkedIn marketing, etc)</li>
+                                <li>Marketing</li>
+                                <li>Brand Management</li>
+                                <li>Dashboards</li>
+                            </ul>
+                        </div>
+                    </Product>
+                </FlexContainer>
+                <FlexContainer>
+                    <Product title="Automation">
+                        <div>
+                            <p>
+                                Streamline your business processes with intelligent automation.
+                            </p>
+                            <ul className='arrows' style={{margin: "20px 10px"}}>
+                                <li>Workflow automations</li>
+                                <li>Business Processes automations</li>
+                                <li>Customer Lifecycle automations</li>
+                            </ul>
+                        </div>
+                    </Product>
+                    <Product title="Applications & Product Development">
+                        <div>
+                            <p>
+                                Custom software solutions for your business needs.
+                            </p>
+                            <ul className='arrows' style={{margin: "20px 10px"}}>
+                                <li>Web Applications</li>
+                                <li>Consoles</li>
+                                <li>Mobile Apps</li>
+                                <li>Custom Client Interfaces (tailored to specific business needs)</li>
+                            </ul>
+                        </div>
+                    </Product>
+                    <Product title="Customer Data Intelligence">
+                        <div>
+                            <p>
+                                Transform your data into actionable insights.
+                            </p>
+                            <ul className='arrows' style={{margin: "20px 10px"}}>
+                                <li>Integrating Data – Unifying first- & nth-party sources</li>
+                                <li>Customer Intelligence – Driving targeted ads</li>
+                                <li>Ad Optimization – Enhancing campaigns on Google, Facebook, Reddit</li>
                             </ul>
                         </div>
                     </Product>

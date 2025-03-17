@@ -14,7 +14,7 @@ import GlobalStyle from '../globalStyles';
 import Navbar from "./Navbar/Navbar"
 import "@fontsource/league-spartan/400.css";
 import "@fontsource/league-spartan/600.css";
-
+import Footer from "./Footer/Footer";
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
@@ -36,16 +36,7 @@ const Layout = ({ children }) => {
       >      <Navbar/>
 
         <main>{children}</main>
-        <footer
-          style={{
-            marginTop: `var(--space-5)`,
-            fontSize: `var(--font-sm)`,
-          }}
-        >
-          © {new Date().getFullYear()} &middot;
-          {` `}
-          <a href="#">Advanta Technologies</a>
-        </footer>
+        <Footer/>
       </div>
     </>
   )

@@ -1,9 +1,9 @@
 import React from 'react'
 import { StaticImage } from 'gatsby-plugin-image';
-import facebook from '../../img/facebook.png'
-import like from '../../img/like.png'
-import love from '../../img/love.png'
-import youtube from '../../img/youtube.png'
+import facebook from '../../images/facebook.png'
+import like from '../../images/like.png'
+import love from '../../images/love.png'
+import youtube from '../../images/youtube.png'
 import { 
     FooterContainer, 
     SocialMediaContainer,
@@ -25,9 +25,9 @@ const Footer = () => {
                 <IconLabelContainer>
                 </IconLabelContainer>
             </NavIconContainer> 
-            <Banner style={{height: "10px", padding: "0px", backgroundColor: "#FFAB00"}}></Banner>
-            <Banner style={{fontSize: "14px"}}>
-                <div style={{display: "flex", flexDirection:"column", cursor: "pointer"}}>
+            <Banner style={{height: "10px", padding: "0px", backgroundColor: "#5DA9FF"}}></Banner>
+            <Banner style={{fontSize: "14px", backgroundColor: "#627092"}}>
+                {/* <div style={{display: "flex", flexDirection:"column", cursor: "pointer"}}>
                     <div style={{fontSize: "16px", textAlign: "start"}}>
                         About
                     </div>
@@ -43,14 +43,14 @@ const Footer = () => {
                     <div style={{fontSize: "16px", textAlign: "start"}}>
                         Indicators
                     </div>
-                </div>
+                </div> */}
                 <div style={{display: "flex", justifyContent: "flex-end", width: "100%"}}>
                     <div style={{display: "flex", flexDirection:"column"}}>
                         <div style={{fontSize: "16px", textAlign: "end"}}>
-                            London Trading Institute
+                            Advanta Technologies
                         </div>
                         <div style={{fontSize: "16px", textAlign: "end", marginBottom: "10px"}}>
-                            info@londontradinginstitute.com
+                            info@advantatech.com
                         </div>
                         <div style={{fontSize: "12px", textAlign: "end"}}>
                             167-169 5th Floor
@@ -59,30 +59,26 @@ const Footer = () => {
                             Great Portland Street
                         </div>
                         <div style={{fontSize: "12px", textAlign: "end"}}>
-                            London, W1W 5PF
+                            Canada, W1W 5PF
                         </div>
                     </div> 
                 </div>
             </Banner>
-            <Banner style={{backgroundColor: "#0F1C38"}}>
+            <Banner style={{backgroundColor: "#445884"}}>
                 <div style={{display: "flex", flexDirection: "column"}}>
                     <div style={{fontSize: "16px", textAlign: "start"}}>
-                        @2022 London Trading Institute | In order to improve your browsing experience London Trading Institute, uses cookies on this site.
+                        @2025 Advanta Technologies | In order to improve your browsing experience Advanta Technologies, uses cookies on this site.
                     </div>
                     <div style={{fontSize: "16px", textAlign: "start"}}>
                         By continuing to use our site you agree to our 
-                        <Link to="/privacy" style={{color: "white", margin: "0px 10px"}}>
+                        <Link to="/404" style={{color: "white", margin: "0px 10px"}}>
                             Privacy Policy
-                        </Link>
-                        Click here to read our 
-                        <Link to="/refund" style={{color: "white", margin: "0px 10px"}}>
-                            Refund Policy and Terms and Conditions
                         </Link>
                     </div>
                     <FlexContainer style={{fontSize: "12px", textAlign: "start", marginTop: "20px", alignItems: "center"}}>
-                    Investors’ capital is at risk. Market investment products involve the use of leverage and may result in losses that exceed initial deposit. They may not be suitable for everyone.
+                   
                     <SocialMediaContainer>
-                        <a href="https://www.youtube.com/c/LondonTradingInstitute">
+                        <a href="">
                             <img
                                 style={{marginLeft: "30px"}}
                                 src={facebook}
@@ -90,7 +86,7 @@ const Footer = () => {
                                 >
                             </img>
                         </a>
-                        <a href="https://www.facebook.com/groups/fxtradersclub/">
+                        <a href="">
                             <img style={{marginLeft: "30px"}}
                                 src={youtube}
                                 height={50}

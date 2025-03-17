@@ -8,6 +8,8 @@ import styled from 'styled-components';
 import Courses from "../components/Courses/Courses"
 import Booking from "../components/Booking/Booking"
 import gatsby from '../images/gatsby-icon.png'
+import { CourseItem } from "../components/Courses/Courses.elements"
+import { FlexContainer } from "../globalStyles"
 export const Banner = styled.div`
   background-color: #445588;
   height: 275px;
@@ -21,6 +23,32 @@ export const Banner = styled.div`
     font-size: 18px;
   }
 `;
+
+const Product = ({title, content, children}) => {
+  return (
+      <CourseItem style={{background: "linear-gradient(to right, #445884, #5DA9FF)"}}>
+          <div>
+              <div style={{padding: "20px 0px", fontWeight: "600", fontSize: "24px", display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "left"}}>
+                  <img src={gatsby} style={{width: "10%", padding: "5px"}}/>
+                  <div style={{ fontWeight: "600", fontSize: "24px", display: "flex", width: "100%"}}>
+                  {title}
+
+                  </div>
+                  {/* <Underline style={{background:"white"}}/> */}
+              </div>
+
+              <div style={{display: "flex", padding: "0px 35px", textAlign: "left"}}>
+                  {children}
+              </div>
+              <div>
+                  {/* <Button>
+                      Learn more
+                  </Button> */}
+              </div>
+          </div>
+      </CourseItem>
+  )
+}
 
 const images = [
   ["https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Walt_Disney_wordmark.svg/2560px-Walt_Disney_wordmark.svg.png",50],
@@ -85,19 +113,69 @@ const IndexPage = () => (
    
     >
             <div>
-            <IntroTitle style={{letterSpacing: "1.7px", marginBottom: "20px", color: "#fff"}}>
-              We empower clients with Gen AI models and agents that drive growth and ROI
-            </IntroTitle>
-            <DescriptionContainer style={{marginBottom: "5px", color: "#fff"}}>
-                {'We assist data-driven companies in enhancing operational efficiency, reducing costs, and creating new revenue streams through the implementation of Generative AI solutions.'}
-            </DescriptionContainer>
-            <DescriptionContainer style={{marginBottom: "10px", color: "#fff"}}>
-                {'Our AI experts can develop AI solutions from pilot to production within weeks, not years. Our development approach merges clear strategies, deep industry knowledge, and technical expertise to accelerate progress.'}
-            </DescriptionContainer>
-            <DescriptionContainer  style={{fontSize: "12px", marginTop: "5px", color: "#8790A5"}}>
-                {/* {'Join our mailing list or arrange a callback.'} */}
-            </DescriptionContainer>
+              <IntroTitle style={{letterSpacing: "1.7px", marginBottom: "20px", color: "#fff"}}>
+                We empower clients with Gen AI models and agents that drive growth and ROI
+              </IntroTitle>
+              <DescriptionContainer style={{marginBottom: "5px", color: "#fff"}}>
+                  {'We assist data-driven companies in enhancing operational efficiency, reducing costs, and creating new revenue streams through the implementation of Generative AI solutions.'}
+              </DescriptionContainer>
+              <DescriptionContainer style={{marginBottom: "10px", color: "#fff"}}>
+                  {'Our AI experts can develop AI solutions from pilot to production within weeks, not years. Our development approach merges clear strategies, deep industry knowledge, and technical expertise to accelerate progress.'}
+              </DescriptionContainer>
+              <DescriptionContainer  style={{fontSize: "12px", marginTop: "5px", color: "#8790A5"}}>
+                  {/* {'Join our mailing list or arrange a callback.'} */}
+              </DescriptionContainer>
+              <FlexContainer>
+                <Product title="Identify Needs">
+                        <div>
+                            <p>
+                                We analyze your business to determine the best technology solutions for maximum impact.
+                            </p>
+                        </div>
+                    </Product>
+                    <Product title="Cost-Effective Solutions">
+                        <div>
+                            <p>
+                                We help you navigate high implementation costs by offering scalable, budget-friendly solutions that deliver real value.
+                            </p>
+                        </div>
+                    </Product>
+                    <Product title="Seamless Integration">
+                        <div>
+                            <p>
+                                Our team ensures smooth adoption by integrating AI with your existing systems, minimizing disruptions and maximizing efficiency.
+                            </p>
+                        </div>
+                    </Product>
+                </FlexContainer>
+                <FlexContainer>
+                    <Product title="Skill Dev & Support">
+                        <div>
+                            <p>
+                                We provide guidance and training to help your team effectively leverage AI, ensuring long-term success.
+                            </p>
+                        </div>
+                    </Product>
+                    <Product title="Future-Ready Strategy">
+                        <div>
+                            <p>
+                                We don't just implement tech; we help future-proof your business with long-term strategies for sustainable growth.
+                            </p>
+                        </div>
+                    </Product>
+                    <Product title="Continuous Innovation">
+                        <div>
+                            <p>
+                                We stay at the forefront of technological advancements to ensure your business remains competitive and innovative.
+                            </p>
+                        </div>
+                    </Product>
+                </FlexContainer>
             </div>
+
+            <>
+            // where cards go
+            </>
     </IntroCardContainer>
     <Courses/>
     <Booking></Booking>

@@ -100,8 +100,8 @@ export const CourseItem = styled.div`
   border-radius: 16px;
   border: none;
   background-color: white;
-  width: 300px;
-  padding: 10px 30px;
+  width: 400px;
+  padding: 20px 20px;
   margin: 20px;
-  margin-right: 5%;
+
 `;
