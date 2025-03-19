@@ -1,13 +1,14 @@
 import React from 'react'
 import { Banner, CoursesContainer, Header, Button, CourseItem } from './Courses.elements'
 import { FlexContainer, Underline } from '../../globalStyles'
-import { navigate } from 'gatsby'
+import { Link, navigate } from 'gatsby'
 import gatsby from '../../images/gatsby-icon.png'
-const Product = ({title, content, children}) => {
+import BusinessInfographic from '../Graphic/BusinessInfographic'
+const Product = ({title, content, children, to}) => {
     return (
         <CourseItem>
             <div style={{height: "100%", display: "flex", flexDirection: "column", justifyContent: "space-between"}}>
-                <div style={{padding: "20px 0px", fontWeight: "600", fontSize: "24px", display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "left"}}>
+                <div style={{padding: "20px 0px", fontWeight: "600", fontSize: "24px", display: "flex", alignItems: "center", flexDirection: "row", justifyContent: "left"}}>
                     <img src={gatsby} style={{width: "30%", padding: "5px"}}/>
                     {title}
                     {/* <Underline style={{background:"white"}}/> */}
@@ -17,9 +18,11 @@ const Product = ({title, content, children}) => {
                     {children}
                 </div>
                 <div style={{width: "100%", display: "flex", justifyContent: "flex-end"}}>
-                    <Button>
-                        Learn more
-                    </Button>
+                    <Link to={to}>
+                        <Button>
+                            Explore
+                        </Button>
+                    </Link>
                 </div>
             </div>
         </CourseItem>
@@ -29,17 +32,14 @@ const Product = ({title, content, children}) => {
 const Courses = (props) => {
     return (
         <CoursesContainer>
-            <div style={{padding: "10px 7% 70px"}}>
-                <Header style={{display: "flex", fontSize: "34px",}}>
-                    <div>
-                        <div>
-                            What we offer
-                        </div>
-                        <Underline width={10}/>
-                    </div>
-                </Header>
+            <div style={{color: "white", fontSize: "36px", fontWeight: "600", textAlign: "center", padding: "20px", background: "#5DA9FF"}}>
+                What We Offer 
+            </div>
+            <BusinessInfographic/>
+
+            <div style={{padding: "40px 7% 70px"}}>
                 <FlexContainer>
-                    <Product title="Web Services">
+                    <Product title="Web Services" to="/web-services">
                         <div>
                             <p>
                                 Comprehensive web development and integration solutions.
@@ -54,7 +54,7 @@ const Courses = (props) => {
                             </ul>
                         </div>
                     </Product>
-                    <Product title="AI Applications">
+                    <Product title="AI Applications" to="/genai-applications">
                         <div>
                             <p>
                                 Advanced AI solutions for modern business needs.
@@ -67,7 +67,7 @@ const Courses = (props) => {
                             </ul>
                         </div>
                     </Product>
-                    <Product title="Strategy, Sales and Marketing">
+                    <Product title="Strategy, Sales and Marketing" to="/strategy-sales-marketing">
                         <div>
                             <p>
                                 Comprehensive business growth solutions.
@@ -83,7 +83,7 @@ const Courses = (props) => {
                     </Product>
                 </FlexContainer>
                 <FlexContainer>
-                    <Product title="Automation">
+                    <Product title="Automation" to="/automation">
                         <div>
                             <p>
                                 Streamline your business processes with intelligent automation.
@@ -95,7 +95,7 @@ const Courses = (props) => {
                             </ul>
                         </div>
                     </Product>
-                    <Product title="Applications & Product Development">
+                    <Product title="Applications & Product Development" to="/applications-product-development">
                         <div>
                             <p>
                                 Custom software solutions for your business needs.
@@ -108,7 +108,7 @@ const Courses = (props) => {
                             </ul>
                         </div>
                     </Product>
-                    <Product title="Customer Data Intelligence">
+                    <Product title="Customer Data Intelligence" to="/customer-data-intelligence">
                         <div>
                             <p>
                                 Transform your data into actionable insights.

@@ -10,6 +10,7 @@ import Booking from "../components/Booking/Booking"
 import gatsby from '../images/gatsby-icon.png'
 import { CourseItem } from "../components/Courses/Courses.elements"
 import { FlexContainer } from "../globalStyles"
+import BusinessInfographic from "../components/Graphic/BusinessInfographic"
 export const Banner = styled.div`
   background-color: #445588;
   height: 275px;
@@ -67,51 +68,10 @@ const IndexPage = () => (
 
     </Banner> */}
 
-     <IntroCardContainer  style={{background: "linear-gradient( to right, #445884 0%,#5DA9FF 30%, #5DA9FF 70%, #627092 100% ", padding: "40px"}}>
-     <div className="overflow-hidden w-full py-4">
-      <div className="flex whitespace-nowrap animate-scroll mask-fade" style={{ justifyItems: "space-evenly"}}>
-        {[...images, ...images].map((src, index) => (
-          <img
-            key={index}
-            src={src[0]}
-            alt="logo"
-            height={src[1]}
-            className="object-contain"
-            style={{ marginRight: "40px" }}
-          />
-        ))}
-      </div>
 
-      {/* Styling */}
-      <style jsx>{`
-        @keyframes scroll {
-          from {
-            transform: translateX(0);
-          }
-          to {
-            transform: translateX(-50%);
-          }
-        }
-
-        .animate-scroll {
-          display: flex;
-          align-items: center;
-          justify-content: space-evenly;
-          width: max-content;
-          animation: scroll 10s linear infinite;
-        }
-
-            .mask-fade {
-      mask-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 20%, rgba(0, 0, 0, 1) 80%, rgba(0, 0, 0, 0) 100%);
-      -webkit-mask-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 20%, rgba(0, 0, 0, 1) 80%, rgba(0, 0, 0, 0) 100%);
-    }
-      `}</style>
-    </div>
-    </IntroCardContainer>
     <IntroCardContainer  
-    style={{background: "linear-gradient(to right, #445884, #627092)"}}
-   
-    >
+      style={{background: "linear-gradient(to right, #445884, #627092)"}}
+    > 
             <div>
               <IntroTitle style={{letterSpacing: "1.7px", marginBottom: "20px", color: "#fff"}}>
                 We empower clients with Gen AI models and agents that drive growth and ROI
@@ -133,7 +93,7 @@ const IndexPage = () => (
                             </p>
                         </div>
                     </Product>
-                    <Product title="Cost-Effective Solutions">
+                    <Product title="Cost Effective Solutions">
                         <div>
                             <p>
                                 We help you navigate high implementation costs by offering scalable, budget-friendly solutions that deliver real value.
@@ -172,10 +132,6 @@ const IndexPage = () => (
                     </Product>
                 </FlexContainer>
             </div>
-
-            <>
-            // where cards go
-            </>
     </IntroCardContainer>
     <Courses/>
     <Booking></Booking>

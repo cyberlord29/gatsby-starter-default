@@ -113,8 +113,18 @@ export const WhiteButton = styled.button`
 
 export const FlexContainer = styled.div`
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+
     @media (max-width: 500px) {
         flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        padding: 15px;
     }
 `;
 

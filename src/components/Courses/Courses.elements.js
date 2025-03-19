@@ -67,7 +67,7 @@ export const CourseContainer = styled.div`
 `;
 
 export const CoursesContainer = styled.div`
-  background-color: #F7F9FF;
+  background-color: #E0F4FF;
 `;
 
 export const Header = styled.div`
@@ -87,6 +87,7 @@ export const Button = styled.button`
   padding: 10px 10px;
   color: white;
   font-weight: bold;
+  font-size: 16px;
 `;
 
 
@@ -100,8 +101,19 @@ export const CourseItem = styled.div`
   border-radius: 16px;
   border: none;
   background-color: white;
-  width: 400px;
-  padding: 20px 20px;
-  margin: 20px;
+  width: calc(33.33% - 20px);
+  min-width: 300px;
+  padding: 20px;
+  transition: all 0.1s ease;
 
+  &:hover {
+    background: linear-gradient(to right, #4a5f94, #6b7ba2);
+    transform: translateY(-8px);
+    box-shadow: 0px 30px 60px -15px rgba(68, 88, 132, 0.5);
+  }
+
+  @media (max-width: 500px) {
+    width: 100%;
+    padding: 15px;
+  }
 `;
