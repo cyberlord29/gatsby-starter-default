@@ -67,7 +67,7 @@ export const CourseContainer = styled.div`
 `;
 
 export const CoursesContainer = styled.div`
-  background-color: #E0F4FF;
+  background-color: white;
 `;
 
 export const Header = styled.div`
@@ -96,24 +96,69 @@ export const CourseItem = styled.div`
   flex-direction: column;
   cursor: pointer;
   color: white;
-  box-shadow: 0px 12px 33px 0px #445884;
-  background: linear-gradient(to right, #445884, #627092);
+  background: linear-gradient(135deg, #445884 0%, #627092 100%);
   border-radius: 16px;
-  border: none;
-  background-color: white;
+  border: 1px solid rgba(255, 255, 255, 0.1);
   width: calc(33.33% - 20px);
-  min-width: 300px;
-  padding: 20px;
-  transition: all 0.1s ease;
+  padding: 28px;
+  min-height: 320px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 10px 30px -5px rgba(68, 88, 132, 0.25);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(93, 169, 255, 0.15) 0%, rgba(255, 255, 255, 0.05) 100%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
 
   &:hover {
-    background: linear-gradient(to right, #4a5f94, #6b7ba2);
     transform: translateY(-8px);
-    box-shadow: 0px 30px 60px -15px rgba(68, 88, 132, 0.5);
+    box-shadow: 0 20px 40px -10px rgba(68, 88, 132, 0.35);
+
+    &::before {
+      opacity: 1;
+    }
+  }
+
+  ul.arrows {
+    margin: 15px 0;
+    padding-left: 20px;
+    list-style: none;
+
+    li {
+      position: relative;
+      padding: 4px 0;
+      font-size: 15px;
+      line-height: 1.5;
+      opacity: 0.9;
+
+      &::before {
+        content: '→';
+        position: absolute;
+        left: -20px;
+        color: #5DA9FF;
+      }
+    }
+  }
+
+  p {
+    margin-bottom: 15px;
+    font-size: 16px;
+    line-height: 1.6;
+    opacity: 0.95;
   }
 
   @media (max-width: 500px) {
     width: 100%;
-    padding: 15px;
+    padding: 24px;
+    min-height: 280px;
   }
 `;

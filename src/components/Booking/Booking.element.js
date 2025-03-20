@@ -33,7 +33,7 @@ export const Button = styled.button`
     height: 50px;
     padding: 0px 10px;
     color: white;
-    width: 400px;
+    width: 300px;
     cursor: pointer;
     font-weight: bold;
     font-size: 16px;

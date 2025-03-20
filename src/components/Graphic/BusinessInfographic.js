@@ -2,14 +2,63 @@ import React from 'react';
 import styled from 'styled-components';
 import logo from '../../images/1.png';
 
+const SectionContainer = styled.div`
+  width: 100%;
+  padding: 80px 10px;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+`;
+
+const TitleContainer = styled.div`
+  width: 100%;
+  max-width: 800px;
+  text-align: center;
+  margin-bottom: 40px;
+  padding: 0 20px;
+
+  @media (max-width: 768px) {
+    margin-bottom: 40px;
+  }
+`;
+
+const Title = styled.h2`
+  font-size: 36px;
+  font-weight: 700;
+  color: #2A5F9E;
+  margin-bottom: 20px;
+
+  @media (max-width: 768px) {
+    font-size: 28px;
+  }
+`;
+
+const Description = styled.p`
+  font-size: 18px;
+  line-height: 1.6;
+  color: #666666;
+  max-width: 600px;
+  margin: 0 auto;
+
+  @media (max-width: 768px) {
+    font-size: 16px;
+  }
+`;
+
 const OuterWrapper = styled.div`
   width: 100%;
-  height: 500px;
+  max-width: 1200px;
+  height: 450px;
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
   background: #5DA9FF;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
 
   @media (max-width: 768px) {
     height: 400px;
@@ -17,16 +66,27 @@ const OuterWrapper = styled.div`
 `;
 
 const Container = styled.div`
-  width: 800px;
+  width: 100%;
+  max-width: 800px;
   height: 800px;
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
+  transform: scale(0.9);
+
+  @media (max-width: 1024px) {
+    transform: scale(0.85);
+  }
 
   @media (max-width: 768px) {
-    width: 600px;
+    width: 100%;
     height: 600px;
+    transform: scale(0.8);
+  }
+
+  @media (max-width: 480px) {
+    transform: scale(0.7);
   }
 `;
 
@@ -49,8 +109,8 @@ const CenterCircle = styled.div`
   animation: pulse 2s ease-in-out infinite;
 
   @media (max-width: 768px) {
-    width: 100px;
-    height: 100px;
+    width: 120px;
+    height: 120px;
   }
 
   &:hover {
@@ -84,8 +144,8 @@ const OuterCircle = styled.div`
   animation: rotate 20s linear infinite;
 
   @media (max-width: 768px) {
-    width: 300px;
-    height: 300px;
+    width: 340px;
+    height: 340px;
   }
 
   @keyframes rotate {
@@ -105,8 +165,8 @@ const CenterLogo = styled.img`
   margin-bottom: 10px;
 
   @media (max-width: 768px) {
-    width: 60px;
-    height: 60px;
+    width: 70px;
+    height: 70px;
     margin-bottom: 5px;
   }
 `;
@@ -141,9 +201,9 @@ const OptionContainer = styled.div`
 
   @media (max-width: 768px) {
     height: auto;
-    min-height: 50px;
-    padding: 8px 0;
-    max-width: 180px;
+    min-height: 55px;
+    padding: 10px 0;
+    max-width: 200px;
   }
 
   &:hover {
@@ -179,9 +239,9 @@ const OptionIcon = styled.div`
   transition: all 0.5s ease;
 
   @media (max-width: 768px) {
-    width: 35px;
-    height: 35px;
-    min-width: 35px;
+    width: 38px;
+    height: 38px;
+    min-width: 38px;
   }
 
   ${OptionContainer}:hover & {
@@ -199,11 +259,11 @@ const OptionTitle = styled.div`
   flex: 1;
 
   @media (max-width: 768px) {
-    font-size: 14px;
-    line-height: 1.2;
+    font-size: 15px;
+    line-height: 1.3;
     word-wrap: break-word;
     white-space: normal;
-    max-width: 120px;
+    max-width: 140px;
   }
 `;
 
@@ -229,7 +289,7 @@ const BusinessInfographic = () => {
       angle: 0, 
       radius: 220,
       mobileAngle: 0,
-      mobileRadius: 120
+      mobileRadius: 140
     },
     { 
       id: 2, 
@@ -238,7 +298,7 @@ const BusinessInfographic = () => {
       angle: 30, 
       radius: 220,
       mobileAngle: 45,
-      mobileRadius: 140
+      mobileRadius: 160
     },
     { 
       id: 3, 
@@ -247,7 +307,7 @@ const BusinessInfographic = () => {
       angle: 150, 
       radius: 260,
       mobileAngle: 135,
-      mobileRadius: 130
+      mobileRadius: 150
     },
     { 
       id: 4, 
@@ -256,7 +316,7 @@ const BusinessInfographic = () => {
       angle: 180,
       radius: 220,
       mobileAngle: 180,
-      mobileRadius: 120
+      mobileRadius: 140
     },
     { 
       id: 5, 
@@ -265,7 +325,7 @@ const BusinessInfographic = () => {
       angle: 207, 
       radius: 280,
       mobileAngle: 225,
-      mobileRadius: 140
+      mobileRadius: 160
     },
     { 
       id: 6, 
@@ -274,7 +334,7 @@ const BusinessInfographic = () => {
       angle: 330, 
       radius: 260,
       mobileAngle: 315,
-      mobileRadius: 130
+      mobileRadius: 150
     },
   ];
 
@@ -316,4 +376,20 @@ const BusinessInfographic = () => {
   );
 };
 
-export default BusinessInfographic; 
+const BusinessInfographicSection = () => {
+  return (
+    <SectionContainer>
+      <TitleContainer>
+        <Title>Our Services</Title>
+        <Description>
+          We offer a comprehensive suite of technology solutions to help businesses thrive in the digital age.
+        </Description>
+      </TitleContainer>
+      <OuterWrapper>
+        <BusinessInfographic />
+      </OuterWrapper>
+    </SectionContainer>
+  );
+};
+
+export default BusinessInfographicSection; 

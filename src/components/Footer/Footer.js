@@ -50,7 +50,7 @@ const Footer = () => {
                             Advanta Technologies
                         </div>
                         <div style={{fontSize: "16px", textAlign: "end", marginBottom: "10px"}}>
-                            info@advantatech.com
+                            contact@TheAdvanta.com
                         </div>
                         <div style={{fontSize: "12px", textAlign: "end"}}>
                             167-169 5th Floor

@@ -7,10 +7,13 @@ import {  Button, InputField, IntroCardContainer, IntroTitle, DescriptionContain
 import styled from 'styled-components';
 import Courses from "../components/Courses/Courses"
 import Booking from "../components/Booking/Booking"
+import Testimonials from "../components/Testimonials/Testimonials"
 import gatsby from '../images/gatsby-icon.png'
 import { CourseItem } from "../components/Courses/Courses.elements"
 import { FlexContainer } from "../globalStyles"
 import BusinessInfographic from "../components/Graphic/BusinessInfographic"
+import Industries from "../components/Graphic/Industries"
+
 export const Banner = styled.div`
   background-color: #445588;
   height: 275px;
@@ -27,24 +30,36 @@ export const Banner = styled.div`
 
 const Product = ({title, content, children}) => {
   return (
-      <CourseItem style={{background: "linear-gradient(to right, #445884, #5DA9FF)"}}>
-          <div>
-              <div style={{padding: "20px 0px", fontWeight: "600", fontSize: "24px", display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "left"}}>
-                  <img src={gatsby} style={{width: "10%", padding: "5px"}}/>
-                  <div style={{ fontWeight: "600", fontSize: "24px", display: "flex", width: "100%"}}>
+      <CourseItem style={{
+          background: "linear-gradient(135deg, rgba(93, 169, 255, 0.1) 0%, rgba(68, 88, 132, 0.2) 100%)",
+          backdropFilter: "blur(10px)",
+          border: "1px solid rgba(255, 255, 255, 0.1)",
+          padding: "25px",
+          borderRadius: "12px",
+          height: "100%",
+          display: "flex",
+          flexDirection: "column",
+          boxShadow: "0 4px 20px rgba(0, 0, 0, 0.1)",
+          transition: "all 0.3s ease",
+          minHeight: "200px"
+      }}>
+          <div style={{height: "100%"}}>
+              <div style={{
+                  marginBottom: "15px",
+                  fontWeight: "400",
+                  fontSize: "22px",
+                  borderBottom: "1px solid rgba(255, 255, 255, 0.15)",
+                  paddingBottom: "12px"
+              }}>
                   {title}
-
-                  </div>
-                  {/* <Underline style={{background:"white"}}/> */}
               </div>
 
-              <div style={{display: "flex", padding: "0px 35px", textAlign: "left"}}>
+              <div style={{
+                  fontSize: "16px",
+                  lineHeight: "1.6",
+                  opacity: "0.95"
+              }}>
                   {children}
-              </div>
-              <div>
-                  {/* <Button>
-                      Learn more
-                  </Button> */}
               </div>
           </div>
       </CourseItem>
@@ -68,19 +83,21 @@ const IndexPage = () => (
 
     </Banner> */}
 
-
+<div style={{color: "white", fontSize: "36px", fontWeight: "400", textAlign: "center", padding: "20px", background: "#5DA9FF"}}>
+AI is here to stay. Are you ?
+</div>
     <IntroCardContainer  
-      style={{background: "linear-gradient(to right, #445884, #627092)"}}
+      style={{background: "linear-gradient(to right, #445884, #627092)", paddingTop: "40px"}}
     > 
             <div>
-              <IntroTitle style={{letterSpacing: "1.7px", marginBottom: "20px", color: "#fff"}}>
+              {/* <IntroTitle style={{letterSpacing: "1.7px", marginBottom: "20px", color: "#fff"}}>
                 We empower clients with Gen AI models and agents that drive growth and ROI
-              </IntroTitle>
+              </IntroTitle> */}
               <DescriptionContainer style={{marginBottom: "5px", color: "#fff"}}>
-                  {'We assist data-driven companies in enhancing operational efficiency, reducing costs, and creating new revenue streams through the implementation of Generative AI solutions.'}
+              We specialize in helping startups leverage AI, automation, and digital transformation to unlock new growth opportunities. Whether it's building intelligent AI applications, refining your sales and marketing strategy, automating business workflows, or developing seamless web and mobile solutions, Advanta is here to make technology work for you, not against you.
               </DescriptionContainer>
               <DescriptionContainer style={{marginBottom: "10px", color: "#fff"}}>
-                  {'Our AI experts can develop AI solutions from pilot to production within weeks, not years. Our development approach merges clear strategies, deep industry knowledge, and technical expertise to accelerate progress.'}
+              Our approach is simple, hands-on, and tailored—so you don't need to be a tech expert to maximize efficiency, increase revenue, and stay ahead of the competition. We take the complexity out of digital transformation, making it accessible and actionable for startups at every stage.
               </DescriptionContainer>
               <DescriptionContainer  style={{fontSize: "12px", marginTop: "5px", color: "#8790A5"}}>
                   {/* {'Join our mailing list or arrange a callback.'} */}
@@ -134,6 +151,8 @@ const IndexPage = () => (
             </div>
     </IntroCardContainer>
     <Courses/>
+    <Industries/>
+    <Testimonials/>
     <Booking></Booking>
 
   </Layout>

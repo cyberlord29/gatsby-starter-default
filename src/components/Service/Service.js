@@ -39,27 +39,89 @@ export const ServiceItem = styled.div`
   width: 400px;
   padding: 20px 10px;
   margin: 20px;
+`;
 
+const ProductContainer = styled.div`
+  display: flex;
+  flex-direction: ${props => props.reverse ? 'row-reverse' : 'row'};
+  justify-content: space-around;
+  
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+  }
+`;
+
+const ProductImage = styled.img`
+  width: 40%;
+  padding: 50px;
+  height: 200px;
+  
+  @media (max-width: 768px) {
+    width: 60%;
+    padding: 20px;
+  }
+`;
+
+const ContentContainer = styled.div`
+  padding: 20px 0px;
+  font-weight: 600;
+  font-size: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: flex-start;
+  margin: 0px 30px;
+  height: 100%;
+  
+  @media (max-width: 768px) {
+    align-items: center;
+    text-align: center;
+    margin: 0px 15px;
+  }
+`;
+
+const Title = styled.div`
+  font-weight: 600;
+  font-size: 32px;
+  display: flex;
+  width: 80%;
+  text-align: left;
+  
+  @media (max-width: 768px) {
+    text-align: center;
+    justify-content: center;
+    width: 100%;
+    font-size: 28px;
+  }
+`;
+
+const Content = styled.div`
+  display: flex;
+  flex-direction: column;
+  text-align: justify;
+  margin-top: 20px;
+  font-size: 18px;
+  
+  @media (max-width: 768px) {
+    text-align: center;
+    font-size: 16px;
+  }
 `;
 
 const Product = ({title, serviceList, children, description, reverse=false}) => {
   return (
-      <ServiceItem style={{ width: "75%",}}>
-        <div style={{display: "flex", flexDirection: reverse ? "row-reverse" : "row", justifyContent: "space-around"}}>
-            <img src={gatsby} style={{width: "40%", padding: "50px"}} height="200px"/>
-            <div style={{padding: "20px 0px", fontWeight: "600", fontSize: "24px", display: "flex", flexDirection: "column", alignItems: "left", justifyContent: "flex-start", margin: " 0px 30px", height: "100%"}}>
-                <div style={{ fontWeight: "600", fontSize: "32px", display: "flex", width: "80%", textAlign: "left"}}>
-                    {title}
-                </div>
-                <div style={{display: "flex", flexDirection: "column", textAlign: "justify", marginTop: "20px", fontSize: "18px"}}>
-                    {children}
-                </div>
-            </div>
-          </div>
-      </ServiceItem>
+    <ServiceItem style={{ width: "100%" }}>
+      <ProductContainer reverse={reverse}>
+        <ProductImage src={gatsby} />
+        <ContentContainer>
+          <Title>{title}</Title>
+          <Content>{children}</Content>
+        </ContentContainer>
+      </ProductContainer>
+    </ServiceItem>
   )
 }
-
 
 const IndexPage = ({title, description, serviceList=[]}) => (
   <Layout>

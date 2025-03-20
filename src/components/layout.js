@@ -33,7 +33,8 @@ const Layout = ({ children }) => {
         style={{
           margin: `0 auto`,
         }}
-      >      <Navbar/>
+      > 
+        <Navbar/>
 
         <main>{children}</main>
         <Footer/>

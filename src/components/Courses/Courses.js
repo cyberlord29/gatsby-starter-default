@@ -3,28 +3,76 @@ import { Banner, CoursesContainer, Header, Button, CourseItem } from './Courses.
 import { FlexContainer, Underline } from '../../globalStyles'
 import { Link, navigate } from 'gatsby'
 import gatsby from '../../images/gatsby-icon.png'
-import BusinessInfographic from '../Graphic/BusinessInfographic'
+import BusinessInfographicSection from '../Graphic/BusinessInfographic'
+
 const Product = ({title, content, children, to}) => {
     return (
         <CourseItem>
-            <div style={{height: "100%", display: "flex", flexDirection: "column", justifyContent: "space-between"}}>
-                <div style={{padding: "20px 0px", fontWeight: "600", fontSize: "24px", display: "flex", alignItems: "center", flexDirection: "row", justifyContent: "left"}}>
-                    <img src={gatsby} style={{width: "30%", padding: "5px"}}/>
+            <div style={{
+                height: "100%", 
+                display: "flex", 
+                flexDirection: "column", 
+                justifyContent: "space-between"
+            }}>
+                <div style={{
+                    padding: "0px 0px 20px", 
+                    fontWeight: "400", 
+                    fontSize: "22px", 
+                    color: "white",
+                    borderBottom: "1px solid rgba(255, 255, 255, 0.15)",
+                    marginBottom: "15px"
+                }}>
                     {title}
-                    {/* <Underline style={{background:"white"}}/> */}
                 </div>
 
-                <div style={{display: "flex", justifyContent: "flex-start", padding: "0px 0px"}}>
+                <div style={{
+                    display: "flex", 
+                    justifyContent: "flex-start", 
+                    flexGrow: 1,
+                    marginBottom: "20px"
+                }}>
                     {children}
                 </div>
-                <div style={{width: "100%", display: "flex", justifyContent: "flex-end"}}>
-                    <Link to={to}>
-                        <Button>
+                
+                <div style={{
+                    width: "100%", 
+                    display: "flex", 
+                    justifyContent: "flex-end"
+                }}>
+                    <Link to={to} style={{textDecoration: "none"}}>
+                        <Button style={{
+                            position: "relative",
+                            paddingRight: "35px",
+                            transition: "all 0.3s ease"
+                        }}>
                             Explore
+                            <div style={{
+                                position: "absolute",
+                                right: "15px",
+                                top: "50%",
+                                transform: "translateY(-50%)",
+                                transition: "all 0.3s ease",
+                                opacity: "0.8"
+                            }}>
+                                →
+                            </div>
                         </Button>
                     </Link>
                 </div>
             </div>
+
+            <style>
+                {`
+                ${Button}:hover {
+                    padding-right: 45px !important;
+                }
+
+                ${Button}:hover > div {
+                    transform: translate(5px, -50%);
+                    opacity: 1;
+                }
+                `}
+            </style>
         </CourseItem>
     )
 }
@@ -32,10 +80,7 @@ const Product = ({title, content, children, to}) => {
 const Courses = (props) => {
     return (
         <CoursesContainer>
-            <div style={{color: "white", fontSize: "36px", fontWeight: "600", textAlign: "center", padding: "20px", background: "#5DA9FF"}}>
-                What We Offer 
-            </div>
-            <BusinessInfographic/>
+            <BusinessInfographicSection/>
 
             <div style={{padding: "40px 7% 70px"}}>
                 <FlexContainer>
