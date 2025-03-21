@@ -241,7 +241,7 @@ const ProcessFlow = () => {
   React.useEffect(() => {
     const interval = setInterval(() => {
       if (!selectedStage) {
-        setRotation(prev => (prev + 60) % 360);
+        setRotation(prev => (prev - 60 + 360) % 360);
       }
     }, 5000);
 
@@ -360,17 +360,7 @@ const ProcessFlow = () => {
                 transition: 'all 0.3s ease'
               }}
             >
-              {/* {!isMobile && (
-                <ConnectionPoint 
-                  style={{
-                    width: `${distance}px`,
-                    left: `-${distance}px`,
-                    opacity: isAtActiveAngle ? 1 : 0,
-                    transition: 'opacity 0.3s ease 1s, width 1s ease, left 1s ease'
-                  }}
-                />
-              )} */}
-              <ContentTitle>{stage.title}</ContentTitle>
+              <ContentTitle>{`${stage.id}. ${stage.title}`}</ContentTitle>
               <ContentText>{stage.content}</ContentText>
             </ContentBox>}
             </>

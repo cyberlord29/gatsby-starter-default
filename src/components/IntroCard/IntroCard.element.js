@@ -1,4 +1,18 @@
-import styled from 'styled-components'
+import styled, { keyframes } from 'styled-components'
+
+const moveStreak = keyframes`
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+`;
+
+const sparkleAnimation = keyframes`
+  0%, 100% { opacity: 0; }
+  50% { opacity: 1; }
+`;
 
 export const IntroCardContainer = styled.div`
     background-color: #F7F9FF;
@@ -6,10 +20,52 @@ export const IntroCardContainer = styled.div`
     display: flex;
     flex-basis: 80%;
     justify-content: center;
+    position: relative;
+    overflow: hidden;
     @media (max-width: 500px) {
         width: 100%;
         flex-direction: column;
+    }
 
+    &::before, &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 200%;
+        height: 100%;
+        opacity: 0.4;
+        pointer-events: none;
+    }
+
+    &::before {
+        background: repeating-linear-gradient(
+            45deg,
+            transparent,
+            transparent 20px,
+            rgba(93, 169, 255, 0.1) 20px,
+            rgba(93, 169, 255, 0.1) 40px,
+            transparent 40px,
+            transparent 60px,
+            rgba(255, 255, 255, 0.1) 60px,
+            rgba(255, 255, 255, 0.1) 80px
+        );
+        animation: ${moveStreak} 20s linear infinite;
+    }
+
+    &::after {
+        background: repeating-linear-gradient(
+            -45deg,
+            transparent,
+            transparent 30px,
+            rgba(93, 169, 255, 0.05) 30px,
+            rgba(93, 169, 255, 0.05) 60px,
+            transparent 60px,
+            transparent 90px,
+            rgba(255, 255, 255, 0.05) 90px,
+            rgba(255, 255, 255, 0.05) 120px
+        );
+        animation: ${moveStreak} 15s linear infinite;
     }
 `;
 
@@ -22,9 +78,27 @@ export const IntroLeftContainerHeader = styled.div`
     display: flex;
     padding: 3rem 7rem;
     flex-basis: 50%;
-    background: linear-gradient(to right, #445884, #53648B);
+    background: linear-gradient(120deg, #445884, #53648B);
     justify-content: center;
     align-items: center;
+    position: relative;
+    overflow: hidden;
+    
+    &::before {
+        content: '';
+        position: absolute;
+        top: -100%;
+        left: -100%;
+        width: 300%;
+        height: 300%;
+        background: radial-gradient(
+            circle,
+            rgba(255, 255, 255, 0.1) 1px,
+            transparent 1px
+        ) 0 0 / 40px 40px;
+        animation: ${sparkleAnimation} 4s ease-in-out infinite;
+    }
+
     @media (max-width: 500px) {
         padding: 4rem 3rem;
     }
@@ -102,8 +176,6 @@ export const ButtonSecondary = styled.button`
     font-weight: bold;
     letter-spacing: 2px;
 `;
-
-
 
 export const IntroTitle = styled.h1`
     display: block;

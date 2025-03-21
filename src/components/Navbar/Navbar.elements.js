@@ -124,7 +124,7 @@ export const NavMenu = styled.ul`
 
 export const NavItem = styled.li`
     height: 50px;
-    font-size: 1rem;
+    font-size: 1.2rem;
     border-bottom: 2px solid transparent;
     cursor: pointer;
     margin: 0 15px;
@@ -144,7 +144,6 @@ export const NavLink = styled(Link)`
     text-decoration: none;
     padding: 0.5rem 1rem;
     height: 100%;
-    font-size: ${props => typeof window !== "undefined" && props.to === window.location.pathname ? '1.4rem' : '1rem'};
     transition: color 0.3s ease;
 
     &:hover {
