@@ -1,17 +1,36 @@
 import styled, { keyframes } from 'styled-components'
 
-const moveStreak = keyframes`
+const rotateYantra = keyframes`
   0% {
-    background-position: 200% 0;
+    transform: rotate(0deg) scale(1);
+  }
+  50% {
+    transform: rotate(180deg) scale(1.1);
   }
   100% {
-    background-position: -200% 0;
+    transform: rotate(360deg) scale(1);
   }
 `;
 
-const sparkleAnimation = keyframes`
-  0%, 100% { opacity: 0; }
-  50% { opacity: 1; }
+const pulseOpacity = keyframes`
+  0%, 100% {
+    opacity: 0.1;
+  }
+  50% {
+    opacity: 0.3;
+  }
+`;
+
+const floatYantra = keyframes`
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  25% {
+    transform: translateY(-5px) rotate(5deg);
+  }
+  75% {
+    transform: translateY(5px) rotate(-5deg);
+  }
 `;
 
 export const IntroCardContainer = styled.div`
@@ -27,45 +46,54 @@ export const IntroCardContainer = styled.div`
         flex-direction: column;
     }
 
-    &::before, &::after {
+    &::before, &::after, &::before, &::after {
         content: '';
         position: absolute;
-        top: 0;
-        left: -100%;
-        width: 200%;
-        height: 100%;
-        opacity: 0.4;
+        top: 50%;
+        left: 50%;
+        width: 100vw;
+        height: 100vw;
         pointer-events: none;
+        transform-origin: center;
     }
 
     &::before {
-        background: repeating-linear-gradient(
-            45deg,
-            transparent,
-            transparent 20px,
-            rgba(93, 169, 255, 0.1) 20px,
-            rgba(93, 169, 255, 0.1) 40px,
-            transparent 40px,
-            transparent 60px,
-            rgba(255, 255, 255, 0.1) 60px,
-            rgba(255, 255, 255, 0.1) 80px
+        background: repeating-conic-gradient(
+            from 0deg,
+            transparent 0deg,
+            transparent 60deg,
+            rgba(93, 169, 255, 0.1) 60deg,
+            rgba(93, 169, 255, 0.1) 120deg,
+            transparent 120deg,
+            transparent 180deg,
+            rgba(255, 255, 255, 0.1) 180deg,
+            rgba(255, 255, 255, 0.1) 240deg,
+            transparent 240deg,
+            transparent 300deg,
+            rgba(93, 169, 255, 0.1) 300deg,
+            rgba(93, 169, 255, 0.1) 360deg
         );
-        animation: ${moveStreak} 20s linear infinite;
+        animation: ${rotateYantra} 20s linear infinite;
+        clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+        transform: translate(-50%, -50%) scale(0.8);
     }
 
     &::after {
-        background: repeating-linear-gradient(
-            -45deg,
-            transparent,
-            transparent 30px,
-            rgba(93, 169, 255, 0.05) 30px,
-            rgba(93, 169, 255, 0.05) 60px,
-            transparent 60px,
-            transparent 90px,
-            rgba(255, 255, 255, 0.05) 90px,
-            rgba(255, 255, 255, 0.05) 120px
+        background: repeating-conic-gradient(
+            from 30deg,
+            transparent 0deg,
+            transparent 60deg,
+            rgba(255, 255, 255, 0.15) 60deg,
+            rgba(255, 255, 255, 0.15) 120deg,
+            transparent 120deg,
+            transparent 180deg,
+            rgba(93, 169, 255, 0.15) 180deg,
+            rgba(93, 169, 255, 0.15) 240deg,
+            transparent 240deg
         );
-        animation: ${moveStreak} 15s linear infinite;
+        animation: ${rotateYantra} 25s linear infinite reverse;
+        clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+        transform: translate(-50%, -50%) scale(0.6);
     }
 `;
 
@@ -87,16 +115,64 @@ export const IntroLeftContainerHeader = styled.div`
     &::before {
         content: '';
         position: absolute;
-        top: -100%;
-        left: -100%;
-        width: 300%;
-        height: 300%;
-        background: radial-gradient(
-            circle,
-            rgba(255, 255, 255, 0.1) 1px,
-            transparent 1px
-        ) 0 0 / 40px 40px;
-        animation: ${sparkleAnimation} 4s ease-in-out infinite;
+        top: 50%;
+        left: 50%;
+        width: 150%;
+        height: 150%;
+        background: conic-gradient(
+            from 0deg,
+            transparent 0deg,
+            transparent 60deg,
+            rgba(255, 255, 255, 0.05) 60deg,
+            rgba(255, 255, 255, 0.05) 120deg,
+            transparent 120deg,
+            transparent 180deg,
+            rgba(93, 169, 255, 0.05) 180deg,
+            rgba(93, 169, 255, 0.05) 240deg,
+            transparent 240deg,
+            transparent 300deg,
+            rgba(255, 255, 255, 0.05) 300deg,
+            rgba(255, 255, 255, 0.05) 360deg
+        );
+        transform: translate(-50%, -50%);
+        animation: ${rotateYantra} 30s linear infinite,
+                   ${pulseOpacity} 8s ease-in-out infinite;
+        clip-path: polygon(
+            50% 0%, 
+            100% 25%, 
+            100% 75%, 
+            50% 100%, 
+            0% 75%, 
+            0% 25%
+        );
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 120%;
+        height: 120%;
+        background: conic-gradient(
+            from 45deg,
+            transparent 0deg,
+            transparent 60deg,
+            rgba(93, 169, 255, 0.05) 60deg,
+            rgba(93, 169, 255, 0.05) 120deg,
+            transparent 120deg
+        );
+        transform: translate(-50%, -50%);
+        animation: ${rotateYantra} 20s linear infinite reverse,
+                   ${floatYantra} 10s ease-in-out infinite;
+        clip-path: polygon(
+            50% 0%,
+            100% 25%,
+            100% 75%,
+            50% 100%,
+            0% 75%,
+            0% 25%
+        );
     }
 
     @media (max-width: 500px) {
