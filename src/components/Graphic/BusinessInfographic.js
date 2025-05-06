@@ -105,7 +105,6 @@ const CenterCircle = styled.div`
   border: 2px solid rgba(255, 255, 255, 0.8);
   transition: transform 0.5s ease;
   overflow: hidden;
-  cursor: pointer;
   animation: pulse 2s ease-in-out infinite;
 
   @media (max-width: 768px) {
@@ -197,7 +196,6 @@ const OptionContainer = styled.div`
   transition: all 0.5s ease;
   color: white;
   z-index: 1;
-  cursor: pointer;
 
   @media (max-width: 768px) {
     height: auto;

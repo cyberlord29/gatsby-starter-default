@@ -13,6 +13,7 @@ import { CourseItem } from "../components/Courses/Courses.elements"
 import { FlexContainer } from "../globalStyles"
 import BusinessInfographic from "../components/Graphic/BusinessInfographic"
 import Industries from "../components/Graphic/Industries"
+import TypeWriter from "../components/TypeWriter/TypeWriter"
 
 export const Banner = styled.div`
   background-color: #445588;
@@ -83,9 +84,8 @@ const IndexPage = () => (
 
     </Banner> */}
 
-<div style={{color: "white", fontSize: "36px", fontWeight: "400", textAlign: "center", padding: "20px", background: "#5DA9FF"}}>
-AI is here to stay. Are you ?
-</div>
+    <TypeWriter />
+    
     <IntroCardContainer  
       style={{background: "linear-gradient(to right, #445884, #627092)", paddingTop: "40px"}}
     > 
@@ -97,7 +97,7 @@ AI is here to stay. Are you ?
               We specialize in helping startups leverage AI, automation, and digital transformation to unlock new growth opportunities. Whether it's building intelligent AI applications, refining your sales and marketing strategy, automating business workflows, or developing seamless web and mobile solutions, Advanta is here to make technology work for you, not against you.
               </DescriptionContainer>
               <DescriptionContainer style={{marginBottom: "10px", color: "#fff"}}>
-              Our approach is simple, hands-on, and tailored—so you don't need to be a tech expert to maximize efficiency, increase revenue, and stay ahead of the competition. We take the complexity out of digital transformation, making it accessible and actionable for startups at every stage.
+              Our approach is simple, hands-on, and tailored so you don't need to be a tech expert to maximize efficiency, increase revenue, and stay ahead of the competition. We take the complexity out of digital transformation, making it accessible and actionable for startups at every stage.
               </DescriptionContainer>
               <DescriptionContainer  style={{fontSize: "12px", marginTop: "5px", color: "#8790A5"}}>
                   {/* {'Join our mailing list or arrange a callback.'} */}

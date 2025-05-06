@@ -94,7 +94,6 @@ export const Button = styled.button`
 export const CourseItem = styled.div`
   display: flex;
   flex-direction: column;
-  cursor: pointer;
   color: white;
   background: linear-gradient(135deg, #445884 0%, #627092 100%);
   border-radius: 16px;

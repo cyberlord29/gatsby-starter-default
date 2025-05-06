@@ -106,7 +106,7 @@ export const IntroLeftContainerHeader = styled.div`
     display: flex;
     padding: 3rem 7rem;
     flex-basis: 50%;
-    background: linear-gradient(120deg, #445884, #53648B);
+    background: linear-gradient(to right, #445884, #53648B);
     justify-content: center;
     align-items: center;
     position: relative;
