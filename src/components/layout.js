@@ -9,7 +9,6 @@ import * as React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 
 
-import "./layout.css"
 import GlobalStyle from '../globalStyles';
 import Navbar from "./Navbar/Navbar"
 import "@fontsource/league-spartan/400.css";
@@ -28,7 +27,7 @@ const Layout = ({ children }) => {
 
   return (
     <>
-          <GlobalStyle />
+      <GlobalStyle />
       <div
         style={{
           margin: `0 auto`,
