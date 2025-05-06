@@ -13,84 +13,14 @@ const TemplateWrapper = ({ children }) => {
   const { title, description } = useSiteMetadata()
   useEffect(() => {
 
-    //trustpilot
-    if (document.getElementById("trustpilot")) {
-      const script = document.createElement('script');
-      script.src = '//widget.trustpilot.com/bootstrap/v5/tp.widget.sync.bootstrap.min.js';
-      script.async = true;
-      document.getElementById('trustpilot').appendChild(script)
-    }
-
-    if (document.getElementById("elite")) {
-      const script = document.createElement('script');
-      script.src = 'https://link.elite360.io/js/embed.js';
-      script.async = true;
-      document.getElementById('elite').appendChild(script)
-    }
-
-    if (document.getElementById("eliteFromIntro")) {
-      const script = document.createElement('script');
-      script.src = 'https://link.elite360.io/js/form_embed.js';
-      script.async = true;
-      document.getElementById('eliteFromIntro').appendChild(script)
-    }
-
     if (document.getElementById("calendly")) {
+      console.log("calendly1")
       const calendlyScript = document.createElement('script');
       calendlyScript.src = 'https://assets.calendly.com/assets/external/widget.js';
       calendlyScript.async = true;
       document.getElementById('calendly').appendChild(calendlyScript)
     }
 
-
-    if (document.getElementById("webinar")) {
-      const calendlyScript = document.createElement('script');
-      calendlyScript.src = 'https://event.webinarjamdev.com/register/8xfn/embed-button';
-      calendlyScript.async = true;
-      document.getElementById('webinar').appendChild(calendlyScript)
-    }
-
-
-    const chatWidget = document.createElement('script');
-    chatWidget.src = 'https://widgets.leadconnectorhq.com/loader.js';
-    chatWidget.setAttribute('data-resources-url', 'https://widgets.leadconnectorhq.com/chat-widget/loader.js');
-    document.getElementById('chat-widget').appendChild(chatWidget);
-    // if(document.getElementById("fb-root")){
-    //   const fbScript = document.createElement('script');
-    //   fbScript.nonce = "TE7pYs94";
-    //   fbScript.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v12.0&appId=401333224030827&autoLogAppEvents=1';
-    //   fbScript.async = true;
-    //   document.getElementById('fb-root').appendChild(fbScript)
-    // }
-
-    if (document.getElementById("banner")) {
-      const script = document.createElement('script');
-      script.src = 'https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js'
-      script.async = true;
-      script.innerHTML = JSON.stringify({
-        "symbols": [{
-          "proName": "OANDA:SPX500USD",
-          "title": "S&P 500"
-        }, {
-          "proName": "OANDA:NAS100USD",
-          "title": "Nasdaq 100"
-        }, {
-          "proName": "FX_IDC:EURUSD",
-          "title": "EUR/USD"
-        }, {
-          "proName": "BITSTAMP:BTCUSD",
-          "title": "BTC/USD"
-        }, {
-          "proName": "BITSTAMP:ETHUSD",
-          "title": "ETH/USD"
-        }],
-        "colorTheme": "dark",
-        "isTransparent": false,
-        "displayMode": "adaptive",
-        "locale": "in"
-      });
-      document.getElementById("banner").appendChild(script);;
-    }
   }, []);
   
   return (
@@ -131,7 +61,7 @@ const TemplateWrapper = ({ children }) => {
           property="og:image"
           content={`${withPrefix('/')}img/og-image.jpg`}
         />
-      </Helmet><div id="maneesh"></div>
+      </Helmet><div id="calendly1"></div>
       <Navbar />
       <div style={{
         overflow: "hidden"

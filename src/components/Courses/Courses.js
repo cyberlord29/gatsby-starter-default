@@ -17,7 +17,7 @@ const Product = ({title, content, children, to}) => {
                 <div style={{
                     padding: "0px 0px 20px", 
                     fontWeight: "400", 
-                    fontSize: "22px", 
+                    fontSize: "24px", 
                     color: "white",
                     borderBottom: "1px solid rgba(255, 255, 255, 0.15)",
                     marginBottom: "15px"
@@ -29,7 +29,7 @@ const Product = ({title, content, children, to}) => {
                     display: "flex", 
                     justifyContent: "flex-start", 
                     flexGrow: 1,
-                    marginBottom: "20px"
+                    marginBottom: "20px",
                 }}>
                     {children}
                 </div>
@@ -86,10 +86,10 @@ const Courses = (props) => {
                 <FlexContainer>
                     <Product title="Web Services" to="/web-services">
                         <div>
-                            <p>
+                            <p style={{ fontSize: "18px" }}>
                                 Comprehensive web development and integration solutions.
                             </p>
-                            <ul className='arrows' style={{margin: "20px 10px"}}>
+                            <ul className='arrows' style={{margin: "20px 10px", fontSize: "20px"}}>
                                 <li>Business Websites</li>
                                 <li>Landing Websites</li>
                                 <li>Payment System Integrations, CRM integrations</li>
@@ -101,10 +101,10 @@ const Courses = (props) => {
                     </Product>
                     <Product title="AI Applications" to="/genai-applications">
                         <div>
-                            <p>
+                            <p style={{ fontSize: "18px" }}>
                                 Advanced AI solutions for modern business needs.
                             </p>
-                            <ul className='arrows' style={{margin: "20px 10px"}}>
+                            <ul className='arrows' style={{margin: "20px 10px", fontSize: "20px"}}>
                                 <li>Chatbots (LLM's, GenAI, Agentic AI)</li>
                                 <li>Knowledge base</li>
                                 <li>Recommendations and Personalization</li>
@@ -114,10 +114,10 @@ const Courses = (props) => {
                     </Product>
                     <Product title="Strategy, Sales and Marketing" to="/strategy-sales-marketing">
                         <div>
-                            <p>
+                            <p style={{ fontSize: "18px" }}>
                                 Comprehensive business growth solutions.
                             </p>
-                            <ul className='arrows' style={{margin: "20px 10px"}}>
+                            <ul className='arrows' style={{margin: "20px 10px", fontSize: "20px"}}>
                                 <li>GTM Strategy</li>
                                 <li>Sales Automation (Lead generation, Email automation, LinkedIn marketing, etc)</li>
                                 <li>Marketing</li>
@@ -130,10 +130,10 @@ const Courses = (props) => {
                 <FlexContainer>
                     <Product title="Automation" to="/automation">
                         <div>
-                            <p>
+                            <p style={{ fontSize: "18px" }}>
                                 Streamline your business processes with intelligent automation.
                             </p>
-                            <ul className='arrows' style={{margin: "20px 10px"}}>
+                            <ul className='arrows' style={{margin: "20px 10px", fontSize: "20px"}}>
                                 <li>Workflow automations</li>
                                 <li>Business Processes automations</li>
                                 <li>Customer Lifecycle automations</li>
@@ -142,10 +142,10 @@ const Courses = (props) => {
                     </Product>
                     <Product title="Applications & Product Development" to="/applications-product-development">
                         <div>
-                            <p>
+                            <p style={{ fontSize: "18px" }}>
                                 Custom software solutions for your business needs.
                             </p>
-                            <ul className='arrows' style={{margin: "20px 10px"}}>
+                            <ul className='arrows' style={{margin: "20px 10px", fontSize: "20px"}}>
                                 <li>Web Applications</li>
                                 <li>Consoles</li>
                                 <li>Mobile Apps</li>
@@ -155,10 +155,10 @@ const Courses = (props) => {
                     </Product>
                     <Product title="Customer Data Intelligence" to="/customer-data-intelligence">
                         <div>
-                            <p>
+                            <p style={{ fontSize: "18px" }}>
                                 Transform your data into actionable insights.
                             </p>
-                            <ul className='arrows' style={{margin: "20px 10px"}}>
+                            <ul className='arrows' style={{margin: "20px 10px", fontSize: "20px"}}>
                                 <li>Integrating Data – Unifying first- & nth-party sources</li>
                                 <li>Customer Intelligence – Driving targeted ads</li>
                                 <li>Ad Optimization – Enhancing campaigns on Google, Facebook, Reddit</li>

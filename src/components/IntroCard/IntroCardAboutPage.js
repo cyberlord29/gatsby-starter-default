@@ -206,23 +206,23 @@ const CardDescription = styled.p`
 export const IntroCardAboutPage = () => {
   const teamMembers = [
     {
-      name: "Nehal Mahmood",
-      title: "CEO | B.Tech & MBA Schulich",
+      name: "Sharief Mahmood",
+      title: "Founder | B.Tech & MBA Schulich",
       bio: "Experienced management consultant with 6+ years of expertise in business strategy, technology, and transformative AI projects to drive business value. Skilled in optimizing operations, enabling data-driven decision-making, and delivering strategic impact.",
       image: nehal,
       social: {
-        linkedin: "https://linkedin.com",
+        linkedin: "https://www.linkedin.com/in/shaik-mahmood-sharief/",
         twitter: "https://twitter.com",
         email: "mailto:nehal@example.com"
       }
     },
     {
       name: "Maneesh Dharma",
-      title: "CTO | B.Tech, Computer Science & Engineering",
+      title: "Co-Founder | B.Tech, Computer Science & Engineering",
       bio: "Over 7 years of experience in building scalable digital products, optimizing business processes, and integrating AI solutions. Specializing in system design, software architecture, automation, and product development.",
       image: man,
       social: {
-        linkedin: "https://linkedin.com",
+        linkedin: "https://www.linkedin.com/in/man-eesh/",
         twitter: "https://twitter.com",
         email: "mailto:maneesh@example.com"
       }
@@ -250,7 +250,7 @@ export const IntroCardAboutPage = () => {
         <IntroLeftContainerHeader>
           <div>
             <IntroTitle style={{letterSpacing: "1.7px", marginBottom: "20px", fontSize: "50px"}}>
-              Our Story
+              Who are we?
             </IntroTitle>
             <DescriptionContainer style={{fontSize: "18px", marginTop: "5px", maxWidth: "500px"}}>
               Advanta has a vested interest in the success of our customers; if they succeed we succeed.<br/><br/>
@@ -307,12 +307,6 @@ export const IntroCardAboutPage = () => {
                   <SocialLinks>
                     <a href={member.social.linkedin} target="_blank" rel="noopener noreferrer">
                       LinkedIn
-                    </a>
-                    <a href={member.social.twitter} target="_blank" rel="noopener noreferrer">
-                      Twitter
-                    </a>
-                    <a href={member.social.email}>
-                      Email
                     </a>
                   </SocialLinks>
                 </TeamInfo>

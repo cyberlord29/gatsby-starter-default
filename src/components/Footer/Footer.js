@@ -75,7 +75,7 @@ const Footer = () => {
                             Privacy Policy
                         </Link>
                     </div>
-                    <FlexContainer style={{fontSize: "12px", textAlign: "start", marginTop: "20px", alignItems: "center"}}>
+                    {/* <FlexContainer style={{fontSize: "12px", textAlign: "start", marginTop: "20px", alignItems: "center"}}>
                    
                     <SocialMediaContainer>
                         <a href="">
@@ -94,7 +94,7 @@ const Footer = () => {
                             </img>
                         </a>
                     </SocialMediaContainer> 
-                    </FlexContainer>
+                    </FlexContainer> */}
                 </div>
           
             </Banner>

@@ -110,6 +110,11 @@ const Navbar = () => {
                         </NavLink>
                     </NavItem>
                     <NavItem>
+                        <NavLink to="/blogs" onClick={handleMenuItemClick}>
+                            Blog
+                        </NavLink>
+                    </NavItem>
+                    <NavItem>
                         <NavLink as="div" onClick={() => {
                             toggleModal(true);
                             handleMenuItemClick();

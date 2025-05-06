@@ -43,24 +43,10 @@ export const ServiceItem = styled.div`
 
 const ProductContainer = styled.div`
   display: flex;
-  flex-direction: ${props => props.reverse ? 'row-reverse' : 'row'};
-  justify-content: space-around;
-  
-  @media (max-width: 768px) {
-    flex-direction: column;
-    align-items: center;
-  }
-`;
-
-const ProductImage = styled.img`
-  width: 40%;
-  padding: 50px;
-  height: 200px;
-  
-  @media (max-width: 768px) {
-    width: 60%;
-    padding: 20px;
-  }
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 `;
 
 const ContentContainer = styled.div`
@@ -69,14 +55,14 @@ const ContentContainer = styled.div`
   font-size: 24px;
   display: flex;
   flex-direction: column;
-  align-items: left;
+  align-items: flex-start;
   justify-content: flex-start;
   margin: 0px 30px;
   height: 100%;
+  width: 100%;
+  max-width: 800px;
   
   @media (max-width: 768px) {
-    align-items: center;
-    text-align: center;
     margin: 0px 15px;
   }
 `;
@@ -85,13 +71,12 @@ const Title = styled.div`
   font-weight: 600;
   font-size: 32px;
   display: flex;
-  width: 80%;
+  width: 100%;
   text-align: left;
+  color: white;
+  margin-bottom: 16px;
   
   @media (max-width: 768px) {
-    text-align: center;
-    justify-content: center;
-    width: 100%;
     font-size: 28px;
   }
 `;
@@ -102,9 +87,10 @@ const Content = styled.div`
   text-align: justify;
   margin-top: 20px;
   font-size: 18px;
+  color: rgba(255, 255, 255, 0.95);
+  line-height: 1.6;
   
   @media (max-width: 768px) {
-    text-align: center;
     font-size: 16px;
   }
 `;
@@ -112,8 +98,7 @@ const Content = styled.div`
 const Product = ({title, serviceList, children, description, reverse=false}) => {
   return (
     <ServiceItem style={{ width: "100%" }}>
-      <ProductContainer reverse={reverse}>
-        <ProductImage src={gatsby} />
+      <ProductContainer>
         <ContentContainer>
           <Title>{title}</Title>
           <Content>{children}</Content>

@@ -50,7 +50,8 @@ const Product = ({title, content, children}) => {
                   fontWeight: "400",
                   fontSize: "22px",
                   borderBottom: "1px solid rgba(255, 255, 255, 0.15)",
-                  paddingBottom: "12px"
+                  paddingBottom: "12px",
+                  textAlign: "left"
               }}>
                   {title}
               </div>
@@ -58,7 +59,9 @@ const Product = ({title, content, children}) => {
               <div style={{
                   fontSize: "16px",
                   lineHeight: "1.6",
-                  opacity: "0.95"
+                  opacity: "0.95",
+                  textAlign: "left",
+                  textJustify: "inter-word"
               }}>
                   {children}
               </div>
@@ -93,13 +96,13 @@ const IndexPage = () => (
               {/* <IntroTitle style={{letterSpacing: "1.7px", marginBottom: "20px", color: "#fff"}}>
                 We empower clients with Gen AI models and agents that drive growth and ROI
               </IntroTitle> */}
-              <DescriptionContainer style={{marginBottom: "5px", color: "#fff"}}>
+              <DescriptionContainer style={{marginBottom: "5px", color: "#fff", textAlign: "left", textJustify: "inter-word"}}>
               We specialize in helping startups leverage AI, automation, and digital transformation to unlock new growth opportunities. Whether it's building intelligent AI applications, refining your sales and marketing strategy, automating business workflows, or developing seamless web and mobile solutions, Advanta is here to make technology work for you, not against you.
               </DescriptionContainer>
-              <DescriptionContainer style={{marginBottom: "10px", color: "#fff"}}>
+              <DescriptionContainer style={{marginBottom: "10px", color: "#fff", textAlign: "left", textJustify: "inter-word"}}>
               Our approach is simple, hands-on, and tailored so you don't need to be a tech expert to maximize efficiency, increase revenue, and stay ahead of the competition. We take the complexity out of digital transformation, making it accessible and actionable for startups at every stage.
               </DescriptionContainer>
-              <DescriptionContainer  style={{fontSize: "12px", marginTop: "5px", color: "#8790A5"}}>
+              <DescriptionContainer  style={{fontSize: "12px", marginTop: "5px", color: "#8790A5", textAlign: "left"}}>
                   {/* {'Join our mailing list or arrange a callback.'} */}
               </DescriptionContainer>
               <FlexContainer>
