@@ -293,7 +293,7 @@ export const IntroCardAboutPage = () => {
       <TeamSection>
         <TeamContainer>
           <TeamGrid>
-            {teamMembers.map((member, index) => (
+            {/* {teamMembers.map((member, index) => (
               <TeamCard key={index}>
                 <TeamImageContainer>
                   <img src={member.image} alt={member.name} />
@@ -311,7 +311,7 @@ export const IntroCardAboutPage = () => {
                   </SocialLinks>
                 </TeamInfo>
               </TeamCard>
-            ))}
+            ))} */}
           </TeamGrid>
         </TeamContainer>
       </TeamSection>
