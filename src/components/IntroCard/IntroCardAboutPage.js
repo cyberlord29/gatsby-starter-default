@@ -207,7 +207,7 @@ export const IntroCardAboutPage = () => {
   const teamMembers = [
     {
       name: "Sharief Mahmood",
-      title: "Founder | B.Tech & MBA Schulich",
+      title: "Co-Founder | B.Tech & MBA Schulich",
       bio: "Experienced management consultant with 6+ years of expertise in business strategy, technology, and transformative AI projects to drive business value. Skilled in optimizing operations, enabling data-driven decision-making, and delivering strategic impact.",
       image: nehal,
       social: {
@@ -220,7 +220,7 @@ export const IntroCardAboutPage = () => {
       name: "Maneesh Dharma",
       title: "Co-Founder | B.Tech, Computer Science & Engineering",
       bio: "Over 7 years of experience in building scalable digital products, optimizing business processes, and integrating AI solutions. Specializing in system design, software architecture, automation, and product development.",
-      image: man,
+      image: null,
       social: {
         linkedin: "https://www.linkedin.com/in/man-eesh/",
         twitter: "https://twitter.com",
@@ -298,7 +298,7 @@ We’ve scaled startups, streamlined business operations, automated customer exp
             {teamMembers.map((member, index) => (
               <TeamCard key={index}>
                 <TeamImageContainer>
-                  <img src={member.image} alt={member.name} />
+                  {member.image && <img src={member.image} alt={member.name} />}
                 </TeamImageContainer>
                 <TeamInfo>
                   <div>
