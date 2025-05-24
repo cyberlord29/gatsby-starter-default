@@ -232,15 +232,15 @@ export const IntroCardAboutPage = () => {
   const features = [
     {
       title: "Who we are?",
-      description: "We specialize in AI-driven solutions, helping businesses leverage data to enhance automation, decision-making, and customer experiences."
+      description: "We are a team of seasoned tech consultants, AI strategists, and digital transformation specialists with 10+ years of experience in driving real-world impact."
     },
     {
       title: "What we do?",
-      description: "We build AI-powered systems, including chatbots, intelligent knowledge bases, personalized recommendations, and content generation tools to drive efficiency and engagement."
+      description: "Our expertise has helped everyone from early-stage startups to some of the world’s largest enterprises navigate complex digital challenges, optimize operations, and accelerate substantial growth"
     },
     {
       title: "Why choose us?",
-      description: "Our team consists of business experts, AI experts, and engineers with deep industry experience."
+      description: "At our core, we believe in building relationships, not just tech solutions. We’ve scaled startups, streamlined business operations, automated customer experiences, and built AI-driven systems that give businesses a competitive edge, and we’re excited to do the same for you."
     }
   ]
 
@@ -250,12 +250,14 @@ export const IntroCardAboutPage = () => {
         <IntroLeftContainerHeader>
           <div>
             <IntroTitle style={{letterSpacing: "1.7px", marginBottom: "20px", fontSize: "50px"}}>
-              Who are we?
+              Meet the Team
             </IntroTitle>
-            <DescriptionContainer style={{fontSize: "18px", marginTop: "5px", maxWidth: "500px"}}>
-              Advanta has a vested interest in the success of our customers; if they succeed we succeed.<br/><br/>
-              We share our passion for innovation to nurture and inspire the next generation of businesses built and leveraged by AI.
-            </DescriptionContainer>
+            {/* <DescriptionContainer style={{fontSize: "18px", marginTop: "5px", maxWidth: "500px"}}>
+              We are a team of seasoned tech consultants, AI strategists, and digital transformation specialists with 10+ years of experience in driving real-world impact. Our expertise has helped everyone from early-stage startups to some of the world’s largest enterprises navigate complex digital challenges, optimize operations, and accelerate substantial growth. <br/><br/>
+              At our core, we believe in building relationships, not just tech solutions. Our clients trust us because we take a personalized, collaborative approach—we don’t offer cookie-cutter solutions, but custom strategies designed specifically for your business goals.
+We’ve scaled startups, streamlined business operations, automated customer experiences, and built AI-driven systems that give businesses a competitive edge, and we’re excited to do the same for you.
+
+            </DescriptionContainer> */}
           </div>
         </IntroLeftContainerHeader>
         <IntroLeftContainer className="" style={{flexBasis: "50%", background: "linear-gradient(to right, #53648B, #627092)"}}>
@@ -293,7 +295,7 @@ export const IntroCardAboutPage = () => {
       <TeamSection>
         <TeamContainer>
           <TeamGrid>
-            {/* {teamMembers.map((member, index) => (
+            {teamMembers.map((member, index) => (
               <TeamCard key={index}>
                 <TeamImageContainer>
                   <img src={member.image} alt={member.name} />
@@ -311,7 +313,7 @@ export const IntroCardAboutPage = () => {
                   </SocialLinks>
                 </TeamInfo>
               </TeamCard>
-            ))} */}
+            ))}
           </TeamGrid>
         </TeamContainer>
       </TeamSection>

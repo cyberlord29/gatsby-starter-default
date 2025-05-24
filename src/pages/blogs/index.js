@@ -12,6 +12,7 @@ const BlogContainer = styled.div`
 
 const BlogTitle = styled.h1`
   margin-bottom: 2rem;
+  margin-top: 2rem;
   color: #333;
 `;
 
@@ -46,6 +47,60 @@ const BlogCard = styled(Link)`
     transform: translateY(-5px);
     box-shadow: 0 8px 30px rgba(68, 88, 132, 0.15);
   }
+`;
+
+const YouTubeCard = styled.a`
+  background: white;
+  border-radius: 16px;
+  padding: 0;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 20px rgba(68, 88, 132, 0.1);
+  color: inherit;
+  overflow: hidden;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(68, 88, 132, 0.15);
+  }
+`;
+
+const ThumbnailContainer = styled.div`
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%; /* 16:9 Aspect Ratio */
+  overflow: hidden;
+`;
+
+const Thumbnail = styled.img`
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+`;
+
+const VideoInfo = styled.div`
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+`;
+
+const VideoTitle = styled.h2`
+  margin: 0;
+  color: #445884;
+  font-size: 1.2rem;
+  font-weight: 600;
+`;
+
+const VideoDate = styled.p`
+  color: #8790A5;
+  font-size: 0.9rem;
+  margin: 0;
 `;
 
 const BlogCardTitle = styled.h2`
@@ -94,11 +149,42 @@ const blogs = [
   }
 ];
 
+const youtubeVideos = [
+  {
+    id: 'video1',
+    title: 'Daniel DuPlessis, Amazon Web Services (AWS) on AI, Cloud & Data Transforming Industries',
+    date: 'March 15, 2024',
+    url: 'https://www.youtube.com/watch?v=92JhR9hTp7A',
+    thumbnail: 'https://img.youtube.com/vi/92JhR9hTp7A/maxresdefault.jpg'
+  },
+  {
+    id: 'video2',
+    title: 'Noureen Syed, Partner at IBM on AI, Consulting & Digital Transformation ',
+    date: 'March 10, 2024',
+    url: 'https://www.youtube.com/watch?v=92JhR9hTp7A',
+    thumbnail: 'https://img.youtube.com/vi/nluinnPEVeA/maxresdefault.jpg'
+  }
+];
+
 const BlogIndex = () => {
   return (
     <Layout>
       <Seo title="Blog" />
       <BlogContainer>
+      <BlogTitle>Podcasts</BlogTitle>
+        <BlogList>
+            {youtubeVideos.map(video => (
+                <YouTubeCard key={video.id} href={video.url} target="_blank" rel="noopener noreferrer">
+                <ThumbnailContainer>
+                  <Thumbnail src={video.thumbnail} alt={video.title} />
+                </ThumbnailContainer>
+                <VideoInfo>
+                  <VideoTitle>{video.title}</VideoTitle>
+                  <VideoDate>{video.date}</VideoDate>
+                </VideoInfo>
+              </YouTubeCard>
+            ))}
+        </BlogList>
         <BlogTitle>Blog</BlogTitle>
         <BlogList>
           {blogs.map(blog => (
