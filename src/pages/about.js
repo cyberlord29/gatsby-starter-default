@@ -1,9 +1,8 @@
 import React from 'react'
-import {IntroCardAboutPage, Testimonial, Booking } from '../components'
+import {IntroCardAboutPage } from '../components'
 import { AboutContainerAboutPage } from '../components/About/About.element'
-import { DescriptionContainer } from '../components/IntroCard/IntroCard.element'
-import { Card, FlexContainer, Header, RDiv, Underline } from '../globalStyles'
 import Layout from "../components/layout"
+import Booking from '../components/Booking/Booking'
 
 import nehal from '../images/nehal.jpeg'
 import man from '../images/man.jpeg'
@@ -29,7 +28,7 @@ const AboutPage = () => {
           
             </AboutContainerAboutPage>
                           </div>
-            {/* <Booking/> */}
+            <Booking></Booking>
         </Layout>
     )
 }

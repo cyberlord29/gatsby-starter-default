@@ -1,7 +1,7 @@
 import React from 'react'
 import { IntroCardContainer, IntroTitle, DescriptionContainer, IntroLeftContainer, IntroLeftContainerHeader } from './IntroCard.element'
 import { FlexContainer } from '../../globalStyles'
-import { CourseItem } from '../Courses/Courses.elements'
+import { Banner, CourseItem } from '../Courses/Courses.elements'
 import styled from 'styled-components'
 import one from '../../images/1.png'
 import two from '../../images/2.png'
@@ -205,22 +205,22 @@ const CardDescription = styled.p`
 
 export const IntroCardAboutPage = () => {
   const teamMembers = [
-    {
-      name: "Sharief Mahmood",
-      title: "Co-Founder | B.Tech & MBA Schulich",
-      bio: "Experienced management consultant with 6+ years of expertise in business strategy, technology, and transformative AI projects to drive business value. Skilled in optimizing operations, enabling data-driven decision-making, and delivering strategic impact.",
-      image: nehal,
-      social: {
-        linkedin: "https://www.linkedin.com/in/shaik-mahmood-sharief/",
-        twitter: "https://twitter.com",
-        email: "mailto:nehal@example.com"
-      }
-    },
+    // {
+    //   name: "Sharief Mahmood",
+    //   title: "Co-Founder | B.Tech & MBA Schulich",
+    //   bio: "Experienced management consultant with 6+ years of expertise in business strategy, technology, and transformative AI projects to drive business value. Skilled in optimizing operations, enabling data-driven decision-making, and delivering strategic impact.",
+    //   image: nehal,
+    //   social: {
+    //     linkedin: "https://www.linkedin.com/in/shaik-mahmood-sharief/",
+    //     twitter: "https://twitter.com",
+    //     email: "mailto:nehal@example.com"
+    //   }
+    // },
     {
       name: "Maneesh Dharma",
       title: "Co-Founder | B.Tech, Computer Science & Engineering",
       bio: "Over 7 years of experience in building scalable digital products, optimizing business processes, and integrating AI solutions. Specializing in system design, software architecture, automation, and product development.",
-      image: null,
+      image: man,
       social: {
         linkedin: "https://www.linkedin.com/in/man-eesh/",
         twitter: "https://twitter.com",
@@ -250,7 +250,7 @@ export const IntroCardAboutPage = () => {
         <IntroLeftContainerHeader>
           <div>
             <IntroTitle style={{letterSpacing: "1.7px", marginBottom: "20px", fontSize: "50px"}}>
-              Meet the Team
+              About Us
             </IntroTitle>
             {/* <DescriptionContainer style={{fontSize: "18px", marginTop: "5px", maxWidth: "500px"}}>
               We are a team of seasoned tech consultants, AI strategists, and digital transformation specialists with 10+ years of experience in driving real-world impact. Our expertise has helped everyone from early-stage startups to some of the world’s largest enterprises navigate complex digital challenges, optimize operations, and accelerate substantial growth. <br/><br/>
@@ -317,6 +317,13 @@ We’ve scaled startups, streamlined business operations, automated customer exp
           </TeamGrid>
         </TeamContainer>
       </TeamSection>
+      <Banner style={{margin: "0px 0%", padding: "50px 20px", textAlign: "center", fontSize: "24px"}}>
+        Your Future, Powered by Advanta
+        The startup journey is already tough; your technology strategy shouldn’t be.<br/><br/>
+        Whether you’re looking to automate processes, integrate AI, enhance your digital presence, or optimize your data, Advanta is your partner in innovation.
+        💡 Let’s build something great together.<br/><br/>
+        🚀 Ready to transform your business? Book a free consultation call today.
+      </Banner>
     </div>
   )
 }

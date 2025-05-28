@@ -3,7 +3,7 @@ import * as React from "react"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import IntroCard from "../components/IntroCard/IntroCard"
-import {  Button, InputField, IntroCardContainer, IntroTitle, DescriptionContainer, IntroLeftContainer, ButtonsContainer, WhiteButtonsContainer, YellowButtonContainer, FeatureItem, IntroLeftContainerHeader } from '../components/IntroCard/IntroCardBanner.element'
+import { IntroCardContainer, DescriptionContainer } from '../components/IntroCard/IntroCardBanner.element'
 import styled from 'styled-components';
 import Courses from "../components/Courses/Courses"
 import Booking from "../components/Booking/Booking"
