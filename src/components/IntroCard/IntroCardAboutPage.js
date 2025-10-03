@@ -205,22 +205,22 @@ const CardDescription = styled.p`
 
 export const IntroCardAboutPage = () => {
   const teamMembers = [
-    // {
-    //   name: "Sharief Mahmood",
-    //   title: "Co-Founder | B.Tech & MBA Schulich",
-    //   bio: "Experienced management consultant with 6+ years of expertise in business strategy, technology, and transformative AI projects to drive business value. Skilled in optimizing operations, enabling data-driven decision-making, and delivering strategic impact.",
-    //   image: nehal,
-    //   social: {
-    //     linkedin: "https://www.linkedin.com/in/shaik-mahmood-sharief/",
-    //     twitter: "https://twitter.com",
-    //     email: "mailto:nehal@example.com"
-    //   }
-    // },
+    {
+      name: "Sharief Mahmood",
+      title: "Co-Founder | B.Tech & MBA Schulich",
+      bio: "Experienced management consultant with 6+ years of expertise in business strategy, technology, and transformative AI projects to drive business value. Skilled in optimizing operations, enabling data-driven decision-making, and delivering strategic impact.",
+      image: nehal,
+      social: {
+        linkedin: "https://www.linkedin.com/in/shaik-mahmood-sharief/",
+        twitter: "https://twitter.com",
+        email: "mailto:nehal@example.com"
+      }
+    },
     {
       name: "Maneesh Dharma",
       title: "Co-Founder | B.Tech, Computer Science & Engineering",
       bio: "Over 7 years of experience in building scalable digital products, optimizing business processes, and integrating AI solutions. Specializing in system design, software architecture, automation, and product development.",
-      image: man,
+      image: "",
       social: {
         linkedin: "https://www.linkedin.com/in/man-eesh/",
         twitter: "https://twitter.com",
